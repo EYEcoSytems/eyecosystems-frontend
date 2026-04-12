@@ -1,0 +1,6 @@
+# robots.txt — eyecosystems.com
+User-agent: *
+Allow: /
+Sitemap: https://eyecosystems.com/sitemap.xml
+Disallow: /staging/
+Disallow: /admin/
