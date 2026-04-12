@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#000000" />
+
+    <title>Blog — Eyecosystems</title>
+    <meta name="description" content="Insights on ADA compliance, accessibility data, and the blind and low-vision community from the Eyecosystems team." />
+
+    <link rel="canonical" href="https://eyecosystems.com/blog" />
+    <link rel="icon" type="image/png" href="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png" />
+    <link rel="apple-touch-icon" href="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Eyecosystems" />
+    <meta property="og:url" content="https://eyecosystems.com/blog" />
+    <meta property="og:title" content="Blog — Eyecosystems" />
+    <meta property="og:description" content="Insights on ADA compliance, accessibility data, and the blind and low-vision community from the Eyecosystems team." />
+    <meta property="og:image" content="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@eyecosystems" />
+    <meta name="twitter:title" content="Blog — Eyecosystems" />
+    <meta name="twitter:description" content="Insights on ADA compliance, accessibility data, and the blind and low-vision community from the Eyecosystems team." />
+
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+    <style>
+      /* ─── Base reset & tokens ─── */
+      *, *::before, *::after { box-sizing: border-box; border: 0 solid #e5e7eb; }
+      html { -webkit-text-size-adjust: 100%; font-family: 'DM Sans', Helvetica Neue, Helvetica, Arial, sans-serif; line-height: 1.5; }
+      body { margin: 0; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; background: #f4f6f8; color: #111; }
+      h1,h2,h3,h4,h5,h6,p,ul,ol { margin: 0; padding: 0; }
+      a { color: inherit; text-decoration: inherit; }
+      img, svg { display: block; max-width: 100%; height: auto; }
+      :root {
+        --eyeco-black: #000;
+        --eyeco-dark-blue: #27455c;
+        --eyeco-teal: #00f5d0;
+        --eyeco-red: #80142b;
+        --eyeco-data-teal: #01a39e;
+        --eyeco-white: #fff;
+        --eyeco-slate: #999;
+        --eyeco-bg: #f4f6f8;
+        --eyeco-border: #dde3ea;
+      }
+      :focus-visible { outline: 2px solid #01a39e; outline-offset: 2px; border-radius: 4px; }
+
+      /* ─── Blog-specific styles ─── */
+
+      /* Header */
+      .blog-header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: var(--eyeco-black);
+        height: 64px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #1a1a1a;
+      }
+      .blog-header-inner {
+        width: 80%;
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .blog-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+      }
+      .blog-logo img {
+        height: 32px;
+        width: auto;
+      }
+      .blog-logo-name {
+        color: var(--eyeco-white);
+        font-family: 'DM Sans', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+      .blog-nav {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+      }
+      .blog-nav a {
+        color: #ccc;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: color 0.15s;
+      }
+      .blog-nav a:hover {
+        color: var(--eyeco-white);
+      }
+      .blog-nav a.active {
+        color: var(--eyeco-teal);
+      }
+
+      /* Page hero */
+      .blog-page-hero {
+        background: var(--eyeco-black);
+        padding: 56px 0 48px;
+        border-bottom: 1px solid #1a1a1a;
+      }
+      .blog-page-hero-inner {
+        width: 80%;
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+      .blog-page-label {
+        font-family: 'Space Mono', monospace;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--eyeco-teal);
+        margin-bottom: 12px;
+      }
+      .blog-page-title {
+        font-family: 'DM Sans', sans-serif;
+        font-size: clamp(32px, 5vw, 48px);
+        font-weight: 800;
+        color: var(--eyeco-white);
+        line-height: 1.1;
+        margin-bottom: 12px;
+      }
+      .blog-page-subtitle {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--eyeco-slate);
+        max-width: 560px;
+      }
+
+      /* Post list */
+      .blog-list-section {
+        background: var(--eyeco-bg);
+        padding: 48px 0 80px;
+        min-height: 60vh;
+      }
+      .blog-list-inner {
+        width: 80%;
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      /* Post card */
+      .post-card {
+        background: var(--eyeco-white);
+        border: 1px solid var(--eyeco-border);
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: 280px 1fr auto;
+        align-items: stretch;
+        overflow: hidden;
+        transition: box-shadow 0.18s, border-color 0.18s;
+      }
+      .post-card:hover {
+        box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+        border-color: #c8d2db;
+      }
+
+      /* Featured image */
+      .post-card-image {
+        display: block;
+        width: 280px;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        flex-shrink: 0;
+        height: 100%;
+        min-height: 158px;
+      }
+      .post-card-image-placeholder {
+        width: 280px;
+        min-height: 158px;
+        background: #e8edf2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .post-card-image-placeholder svg {
+        opacity: 0.3;
+      }
+
+      /* Card body */
+      .post-card-body {
+        padding: 24px 28px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+      }
+      .post-card-meta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .post-card-category {
+        font-family: 'Space Mono', monospace;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--eyeco-data-teal);
+        background: #e6f7f6;
+        padding: 3px 8px;
+        border-radius: 4px;
+      }
+      .post-card-date {
+        font-family: 'Space Mono', monospace;
+        font-size: 11px;
+        font-weight: 400;
+        color: var(--eyeco-slate);
+      }
+      .post-card-title {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--eyeco-black);
+        line-height: 1.3;
+        text-decoration: none;
+        transition: color 0.15s;
+      }
+      .post-card-title:hover {
+        color: var(--eyeco-data-teal);
+      }
+      .post-card-excerpt {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        color: #444;
+        line-height: 1.65;
+      }
+      .post-card-tags {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 2px;
+      }
+      .post-tag {
+        font-family: 'Space Mono', monospace;
+        font-size: 10px;
+        letter-spacing: 0.06em;
+        color: var(--eyeco-dark-blue);
+        background: #eef1f5;
+        padding: 2px 8px;
+        border-radius: 3px;
+      }
+
+      /* Card CTA */
+      .post-card-cta {
+        display: flex;
+        align-items: center;
+        padding: 24px 28px 24px 0;
+        flex-shrink: 0;
+      }
+      .btn-read-post {
+        display: inline-block;
+        background: var(--eyeco-data-teal);
+        color: var(--eyeco-white);
+        font-family: 'DM Sans', sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        padding: 10px 20px;
+        border-radius: 6px;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: background 0.15s, transform 0.1s;
+      }
+      .btn-read-post:hover {
+        background: #018a84;
+        transform: translateY(-1px);
+      }
+      .btn-read-post:active {
+        transform: translateY(0);
+      }
+
+      /* Footer */
+      .blog-footer {
+        background: var(--eyeco-black);
+        padding: 40px 0;
+        border-top: 1px solid #1a1a1a;
+      }
+      .blog-footer-inner {
+        width: 80%;
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+      .blog-footer-copy {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 13px;
+        color: var(--eyeco-slate);
+      }
+      .blog-footer-links {
+        display: flex;
+        gap: 24px;
+      }
+      .blog-footer-links a {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 13px;
+        color: var(--eyeco-slate);
+        text-decoration: none;
+        transition: color 0.15s;
+      }
+      .blog-footer-links a:hover {
+        color: var(--eyeco-white);
+      }
+
+      /* Responsive */
+      @media (max-width: 900px) {
+        .post-card {
+          grid-template-columns: 220px 1fr auto;
+        }
+        .post-card-image,
+        .post-card-image-placeholder {
+          width: 220px;
+        }
+      }
+      @media (max-width: 768px) {
+        .blog-header-inner,
+        .blog-page-hero-inner,
+        .blog-list-inner,
+        .blog-footer-inner {
+          width: 92%;
+        }
+        .blog-nav {
+          display: none;
+        }
+        .post-card {
+          grid-template-columns: 1fr;
+        }
+        .post-card-image {
+          width: 100%;
+          height: 200px;
+          aspect-ratio: unset;
+        }
+        .post-card-image-placeholder {
+          width: 100%;
+          height: 200px;
+        }
+        .post-card-cta {
+          padding: 0 24px 24px;
+        }
+        .blog-footer-inner {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <!-- ─── Header ─────────────────────────────────────── -->
+    <header class="blog-header" role="banner">
+      <div class="blog-header-inner">
+        <a href="/" class="blog-logo" aria-label="Eyecosystems home">
+          <img
+            src="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png"
+            alt="Eyecosystems logo"
+            width="32"
+            height="32"
+          />
+          <span class="blog-logo-name">Eyecosystems</span>
+        </a>
+        <nav class="blog-nav desktop-nav" role="navigation" aria-label="Main navigation">
+          <a href="/">Home</a>
+          <a href="/our-data">Our Data</a>
+          <a href="/about">About</a>
+          <a href="/docs">Docs</a>
+          <a href="/investors">Investors</a>
+          <a href="/contact">Contact</a>
+          <a href="/blog" class="active" aria-current="page">Blog</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ─── Page hero ───────────────────────────────────── -->
+    <section class="blog-page-hero" aria-label="Blog header">
+      <div class="blog-page-hero-inner">
+        <p class="blog-page-label">Eyecosystems</p>
+        <h1 class="blog-page-title">Blog</h1>
+        <p class="blog-page-subtitle">Insights on ADA compliance, accessibility data, and the communities we serve.</p>
+      </div>
+    </section>
+
+    <!-- ─── Post list ────────────────────────────────────── -->
+    <!--
+      HOW TO ADD A NEW POST:
+      1. Copy one of the <article class="post-card"> blocks below.
+      2. Paste it ABOVE the existing cards (newest first).
+      3. Update the slug, title, date, category, tags, excerpt, and image src.
+      4. Create /blog/your-post-slug/index.html for the post page.
+      5. Place the 1920×1080 featured image at /blog/images/your-post-slug.jpg
+    -->
+    <main class="blog-list-section" id="main-content">
+      <div class="blog-list-inner">
+
+        <!-- ── Post card: ADA Title II Compliance 2026 ── -->
+        <article class="post-card" aria-label="Blog post: ADA Title II Compliance 2026: What GovTech Vendors Must Do Before April 24">
+          <img
+            class="post-card-image"
+            src="/blog/images/ada-title-ii-data-requirements.jpg"
+            alt="Judge's gavel beside a laptop — ADA Title II compliance 2026"
+            width="280"
+            loading="eager"
+          />
+          <div class="post-card-body">
+            <div class="post-card-meta">
+              <span class="post-card-category">Compliance</span>
+              <time class="post-card-date" datetime="2026-04-12">April 12, 2026</time>
+            </div>
+            <a href="/blog/ada-title-ii-compliance-2026" class="post-card-title">
+              ADA Title II Compliance 2026: What GovTech Vendors Must Do Before April 24
+            </a>
+            <p class="post-card-excerpt">
+              The April 24, 2026 deadline is here. Here's what state and local governments — and the GovTech vendors serving them — must know, document, and do to meet ADA Title II digital accessibility requirements.
+            </p>
+            <div class="post-card-tags" aria-label="Tags">
+              <span class="post-tag">ADA Title II</span>
+              <span class="post-tag">Compliance 2026</span>
+              <span class="post-tag">GovTech</span>
+              <span class="post-tag">Good Faith Effort</span>
+            </div>
+          </div>
+          <div class="post-card-cta">
+            <a href="/blog/ada-title-ii-compliance-2026" class="btn-read-post">
+              Read Blog Post
+            </a>
+          </div>
+        </article>
+
+
+      </div>
+    </main>
+
+    <!-- ─── Footer ───────────────────────────────────────── -->
+    <footer class="blog-footer" role="contentinfo">
+      <div class="blog-footer-inner">
+        <span class="blog-footer-copy">&copy; 2026 Eyecosystems. All rights reserved.</span>
+        <nav class="blog-footer-links" aria-label="Footer navigation">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+          <a href="/contact">Contact</a>
+        </nav>
+      </div>
+    </footer>
+
+  </body>
+</html>
