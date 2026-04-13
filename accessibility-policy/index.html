@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accessibility Policy — Eyecosystems</title>
+  <meta name="description" content="Eyecosystems is committed to digital accessibility. Read our accessibility policy and conformance statement." />
+  <link rel="canonical" href="https://eyecosystems.com/accessibility-policy" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-940W81LPR1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-940W81LPR1');
+  </script>
+  <style>
+    /* ── BASE RESET ── */
+    *, *::before, *::after { box-sizing: border-box; border: 0 solid #e5e7eb; }
+    html { -webkit-text-size-adjust: 100%; font-family: 'DM Sans', Helvetica Neue, Helvetica, Arial, sans-serif; line-height: 1.5; }
+    body { margin: 0; -webkit-font-smoothing: antialiased; background: #f4f6f8; color: #111; }
+    h1,h2,h3,h4,h5,h6,p,ul,ol { margin: 0; padding: 0; }
+    a { color: inherit; text-decoration: inherit; }
+    img, svg { display: block; max-width: 100%; height: auto; }
+    :root { --eyeco-black:#000; --eyeco-dark-blue:#27455c; --eyeco-teal:#00f5d0; --eyeco-data-teal:#01a39e; --eyeco-white:#fff; --eyeco-slate:#999; --eyeco-bg:#f4f6f8; --eyeco-border:#dde3ea; }
+    :focus-visible { outline: 2px solid #01a39e; outline-offset: 2px; border-radius: 4px; }
+    @media (max-width: 768px) { .header-inner, .footer-inner { width: 92% !important; } .site-nav { display: none; } }
+
+    /* ── HEADER ── */
+    .site-header { position: sticky; top: 0; z-index: 100; background: #000; height: 64px; display: flex; align-items: center; border-bottom: 1px solid #1a1a1a; }
+    .header-inner { width: 80%; max-width: 1280px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+    .site-logo { display: flex; align-items: center; text-decoration: none; }
+    .site-logo img { height: 32px; width: auto; }
+    .site-nav { display: flex; align-items: center; gap: 28px; }
+    .site-nav > a { color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; text-decoration: none; transition: color 0.15s; }
+    .site-nav > a:hover { color: #fff; }
+    .site-nav > a.active { color: #00f5d0; }
+    .nav-dropdown { position: relative; display: flex; align-items: center; }
+    .nav-dropdown-btn { background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 5px; color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; padding: 0; transition: color 0.15s; }
+    .nav-dropdown-btn:hover, .nav-dropdown.is-open .nav-dropdown-btn { color: #fff; }
+    .nav-dropdown-icon { transition: transform 0.2s; }
+    .nav-dropdown.is-open .nav-dropdown-icon { transform: rotate(180deg); }
+    .nav-dropdown-menu { display: none; position: absolute; top: calc(100% + 16px); right: -8px; background: #111; border: 1px solid #2a2a2a; border-radius: 8px; padding: 6px; min-width: 190px; z-index: 200; box-shadow: 0 8px 24px rgba(0,0,0,0.5); }
+    .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+    .nav-dropdown-menu a { display: block; padding: 9px 14px; color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; text-decoration: none; border-radius: 5px; transition: background 0.1s, color 0.1s; }
+    .nav-dropdown-menu a:hover { background: #1e1e1e; color: #fff; }
+    .nav-dropdown-menu a.active { color: #00f5d0; }
+
+    /* ── FOOTER ── */
+    .site-footer { background: #000; border-top: 1px solid #1a1a1a; padding: 60px 0 0; margin-top: 80px; }
+    .footer-inner { width: 80%; max-width: 1280px; margin: 0 auto; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 48px; border-bottom: 1px solid #1a1a1a; }
+    .footer-logo { display: flex; }
+    .footer-logo img { height: 28px; width: auto; }
+    .footer-tagline { font-family: 'DM Sans', sans-serif; font-size: 13px; color: #666; line-height: 1.6; margin-top: 12px; max-width: 220px; }
+    .footer-col { display: flex; flex-direction: column; gap: 10px; }
+    .footer-col-label { font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #555; margin-bottom: 4px; }
+    .footer-col a { font-family: 'DM Sans', sans-serif; font-size: 14px; color: #888; text-decoration: none; transition: color 0.15s; }
+    .footer-col a:hover { color: #fff; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; flex-wrap: wrap; gap: 12px; }
+    .footer-copy { font-family: 'DM Sans', sans-serif; font-size: 12px; color: #444; }
+    .footer-bottom-links { display: flex; gap: 20px; }
+    .footer-bottom-links a { font-family: 'DM Sans', sans-serif; font-size: 12px; color: #444; text-decoration: none; transition: color 0.15s; }
+    .footer-bottom-links a:hover { color: #fff; }
+    @media (max-width: 768px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── PAGE HERO ── */
+    .page-hero {
+      background: #000;
+      padding: 72px 0 64px;
+      text-align: center;
+    }
+    .page-hero-inner {
+      width: 80%;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .hero-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #01a39e;
+      margin-bottom: 18px;
+    }
+    .page-hero h1 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(32px, 4.5vw, 48px);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .hero-subtitle {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 17px;
+      color: #888;
+    }
+
+    /* ── LEGAL CONTENT ── */
+    .legal-wrap {
+      width: 80%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 56px 0 0;
+      display: flex;
+      justify-content: center;
+    }
+    .legal-card {
+      background: #fff;
+      border: 1px solid #dde3ea;
+      border-radius: 16px;
+      padding: 52px 56px;
+      width: 100%;
+      max-width: 720px;
+    }
+
+    /* ── CALLOUT BOX ── */
+    .callout-box {
+      background: #27455c;
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 44px;
+    }
+    .callout-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #00f5d0;
+      margin-bottom: 10px;
+    }
+    .callout-box p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      color: rgba(255,255,255,0.88);
+      line-height: 1.7;
+    }
+
+    /* ── TOC ── */
+    .legal-toc {
+      background: #f9fafb;
+      border: 1px solid #eef0f3;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+    }
+    .legal-toc p {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 10px;
+    }
+    .legal-toc ol {
+      list-style: decimal;
+      padding-left: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .legal-toc li a {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: #01a39e;
+      text-decoration: none;
+    }
+    .legal-toc li a:hover { text-decoration: underline; }
+
+    /* ── SECTIONS ── */
+    .legal-section {
+      margin-bottom: 40px;
+    }
+    .legal-section:last-child { margin-bottom: 0; }
+    .legal-section h2 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eef0f3;
+    }
+    .legal-section p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      color: #444;
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+    .legal-section p:last-child { margin-bottom: 0; }
+    .legal-section a {
+      color: #01a39e;
+      text-decoration: underline;
+    }
+    .legal-section a:hover { color: #018c88; }
+    .legal-section ul {
+      list-style: disc;
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .legal-section ul li {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      color: #444;
+      line-height: 1.65;
+    }
+
+    /* ── SPEC CHIPS ── */
+    .spec-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .spec-chip {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      color: #27455c;
+      background: #eef4f8;
+      border: 1px solid #c8d8e4;
+      border-radius: 6px;
+      padding: 4px 10px;
+      letter-spacing: 0.04em;
+    }
+
+    @media (max-width: 768px) {
+      .legal-wrap { width: 92%; }
+      .legal-card { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="/" class="site-logo" aria-label="Eyecosystems home">
+        <img src="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png" alt="Eyecosystems logo" width="32" height="32" />
+      </a>
+      <nav class="site-nav" role="navigation" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/our-data">Our Data</a>
+        <div class="nav-dropdown" id="about-dropdown">
+          <button class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false" aria-controls="about-menu">
+            About
+            <svg class="nav-dropdown-icon" width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M2 3.5l3.5 3.5 3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="nav-dropdown-menu" id="about-menu" role="menu">
+            <a href="/about" role="menuitem">About Eyecosystems</a>
+            <a href="/blog" role="menuitem">Blog</a>
+          </div>
+        </div>
+        <a href="/docs">Docs</a>
+        <a href="/investors">Investors</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="page-hero" aria-labelledby="hero-heading">
+    <div class="page-hero-inner">
+      <p class="hero-label">Accessibility</p>
+      <h1 id="hero-heading">Accessibility Policy</h1>
+      <p class="hero-subtitle">Our commitment to digital inclusion</p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <main>
+    <div class="legal-wrap">
+      <article class="legal-card" aria-label="Accessibility Policy">
+
+        <!-- CALLOUT BOX -->
+        <aside class="callout-box" aria-label="Our accessibility commitment">
+          <p class="callout-label">We Practice What We Preach</p>
+          <p>Eyecosystems provides human-verified accessibility data for ADA Title II compliance. Our own digital properties are held to that same standard. We believe the organizations that help others achieve accessibility must lead by example — and we are committed to doing exactly that.</p>
+        </aside>
+
+        <!-- TABLE OF CONTENTS -->
+        <nav class="legal-toc" aria-label="Table of contents">
+          <p>Contents</p>
+          <ol>
+            <li><a href="#our-commitment">Our Commitment</a></li>
+            <li><a href="#conformance-status">Conformance Status</a></li>
+            <li><a href="#technical-specifications">Technical Specifications</a></li>
+            <li><a href="#known-limitations">Known Limitations</a></li>
+            <li><a href="#feedback-contact">Feedback and Contact</a></li>
+            <li><a href="#formal-complaints">Formal Complaints</a></li>
+          </ol>
+        </nav>
+
+        <div class="legal-section" id="our-commitment">
+          <h2>1. Our Commitment</h2>
+          <p>Eyecosystems is committed to ensuring that our website and digital platform are accessible to all users, including people with disabilities. We believe that accessibility is not a compliance checkbox — it is a fundamental aspect of building a product that works for everyone. As a company whose mission centers on accessibility data, we hold ourselves to a high standard on our own digital properties.</p>
+          <p>We aim to conform to the <strong>Web Content Accessibility Guidelines (WCAG) 2.1 Level AA</strong> as published by the World Wide Web Consortium (W3C). These guidelines explain how to make web content more accessible to people with a wide range of disabilities, including visual, auditory, physical, speech, cognitive, language, learning, and neurological disabilities.</p>
+          <p>This policy applies to the Eyecosystems public website (eyecosystems.com), our developer documentation portal, and our customer-facing data platform. We review and update this policy annually, or sooner when significant changes are made to our digital properties.</p>
+        </div>
+
+        <div class="legal-section" id="conformance-status">
+          <h2>2. Conformance Status</h2>
+          <p>The current conformance status of eyecosystems.com is <strong>partially conformant</strong> with WCAG 2.1 Level AA. Partially conformant means that some parts of the content do not yet fully conform to the accessibility standard, and we have active remediation work underway to address known gaps.</p>
+          <p>We conduct ongoing automated and manual accessibility evaluations. Our most recent audit was completed in March 2026 using both automated scanning tools and manual review with assistive technologies including NVDA, VoiceOver, and JAWS. The results of that audit are guiding our current remediation roadmap.</p>
+          <p>We are committed to moving from partially conformant to fully conformant status. New features and pages are evaluated for accessibility before publication, and legacy content is being updated in priority order based on usage frequency and impact on users with disabilities.</p>
+        </div>
+
+        <div class="legal-section" id="technical-specifications">
+          <h2>3. Technical Specifications</h2>
+          <p>Our website relies on the following technologies to support accessibility. Conformance to WCAG 2.1 AA has been tested with these technologies:</p>
+          <div class="spec-chips" role="list" aria-label="Technologies used">
+            <span class="spec-chip" role="listitem">HTML5</span>
+            <span class="spec-chip" role="listitem">CSS3</span>
+            <span class="spec-chip" role="listitem">WAI-ARIA 1.2</span>
+            <span class="spec-chip" role="listitem">JavaScript (ES2020+)</span>
+            <span class="spec-chip" role="listitem">SVG</span>
+          </div>
+          <p style="margin-top: 16px;">We use semantic HTML elements to convey structure and meaning, WAI-ARIA roles and properties to supplement native semantics where needed, and progressive enhancement principles so that core content remains accessible even when scripting is unavailable or restricted.</p>
+          <p>All interactive components — including navigation dropdowns, forms, modals, and data tables — are designed to be fully operable by keyboard. Focus management follows established ARIA design patterns. Color contrast ratios for text and UI components meet or exceed the WCAG 2.1 AA minimums of 4.5:1 for normal text and 3:1 for large text and non-text UI elements.</p>
+        </div>
+
+        <div class="legal-section" id="known-limitations">
+          <h2>4. Known Limitations</h2>
+          <p>Despite our best efforts, we are aware of the following limitations that are currently under remediation:</p>
+          <ul>
+            <li><strong>Data tables in the API documentation portal</strong> — Some complex data tables lack comprehensive row and column headers. We are restructuring these tables and adding proper <code>scope</code> and <code>aria-labelledby</code> attributes. Target completion: Q2 2026.</li>
+            <li><strong>PDF exports</strong> — Compliance report PDFs generated by the platform are not currently tagged for accessibility and may not be fully readable by screen reader users. We are implementing a tagged PDF pipeline. Target completion: Q3 2026.</li>
+            <li><strong>Interactive map components</strong> — The geographic visualization layer used on our data explorer page provides limited keyboard navigation for individual map features. We are evaluating alternative approaches and interim accessible equivalents. Target completion: Q3 2026.</li>
+            <li><strong>Third-party embedded content</strong> — Some third-party integrations (e.g., scheduling widgets, video embeds) may not fully meet WCAG 2.1 AA. We are working with our vendors to request accessibility improvements and are evaluating alternative solutions.</li>
+          </ul>
+          <p>If you encounter a barrier not listed above, please let us know using the contact information in the Feedback section. We treat all accessibility reports as high-priority issues.</p>
+        </div>
+
+        <div class="legal-section" id="feedback-contact">
+          <h2>5. Feedback and Contact</h2>
+          <p>We welcome your feedback on the accessibility of our website and platform. If you experience any accessibility barriers, have difficulty accessing any part of our content, or would like to request information in an alternative accessible format, please contact us:</p>
+          <p>
+            <strong>Eyecosystems, LLC — Accessibility</strong><br />
+            Email: <a href="mailto:contact@eyecosystems.com">contact@eyecosystems.com</a><br />
+            Jacksonville, FL
+          </p>
+          <p>Please include a description of the accessibility barrier, the web page or feature affected, the assistive technology and browser you were using (if applicable), and your preferred contact method. We will acknowledge your report within <strong>2 business days</strong> and aim to resolve identified issues or provide an accessible alternative within 10 business days, depending on the complexity of the issue.</p>
+          <p>We are genuinely committed to making your experience better. Every report we receive helps us improve not only for you but for all users who may encounter the same barrier.</p>
+        </div>
+
+        <div class="legal-section" id="formal-complaints">
+          <h2>6. Formal Complaints</h2>
+          <p>If you are not satisfied with our response to your accessibility feedback, or if you believe we have failed to address an accessibility barrier adequately, you have the right to file a formal complaint with the relevant authority.</p>
+          <p>In the United States, you may file a complaint regarding website accessibility under the Americans with Disabilities Act (ADA) with the <strong>U.S. Department of Justice (DOJ)</strong>. The DOJ Civil Rights Division handles ADA Title II and Title III complaints and can be contacted through:</p>
+          <p>
+            U.S. Department of Justice<br />
+            Civil Rights Division<br />
+            950 Pennsylvania Avenue, NW<br />
+            Washington, DC 20530<br />
+            Website: <a href="https://www.ada.gov" target="_blank" rel="noopener noreferrer">ada.gov</a><br />
+            ADA Information Line: 1-800-514-0301 (voice) / 1-800-514-0383 (TTY)
+          </p>
+          <p>You may also file a complaint with the U.S. Department of Health and Human Services Office for Civil Rights, or with your applicable state civil rights enforcement agency, depending on the nature of the complaint and your jurisdiction. We encourage you to contact us first so we have the opportunity to address your concern directly.</p>
+        </div>
+
+      </article>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="/" class="footer-logo" aria-label="Eyecosystems home">
+            <img src="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png" alt="Eyecosystems" width="28" height="28" />
+          </a>
+          <p class="footer-tagline">Human-verified accessibility data for ADA Title II compliance.</p>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-label">Product</p>
+          <a href="/our-data">Our Data</a>
+          <a href="/docs">Docs</a>
+          <a href="/book-demo">Book Demo</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-label">Company</p>
+          <a href="/about">About</a>
+          <a href="/blog">Blog</a>
+          <a href="/investors">Investors</a>
+          <a href="/contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-label">Legal</p>
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+          <a href="/accessibility-policy">Accessibility</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">&copy; 2026 Eyecosystems. All rights reserved. Jacksonville, FL.</span>
+        <nav class="footer-bottom-links" aria-label="Legal navigation">
+          <a href="/privacy">Privacy</a>
+          <a href="/terms">Terms</a>
+          <a href="/contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.nav-dropdown').forEach(function(el) {
+      var btn = el.querySelector('.nav-dropdown-btn');
+      btn.addEventListener('click', function(e) { e.stopPropagation(); var o = el.classList.toggle('is-open'); btn.setAttribute('aria-expanded', o); });
+    });
+    document.addEventListener('click', function() {
+      document.querySelectorAll('.nav-dropdown').forEach(function(el) { el.classList.remove('is-open'); var b = el.querySelector('.nav-dropdown-btn'); if (b) b.setAttribute('aria-expanded', 'false'); });
+    });
+  </script>
+</body>
+</html>

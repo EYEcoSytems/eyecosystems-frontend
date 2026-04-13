@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Eyecosystems</title>
+  <meta name="description" content="Eyecosystems privacy policy. How we collect, use, and protect your data." />
+  <link rel="canonical" href="https://eyecosystems.com/privacy" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-940W81LPR1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-940W81LPR1');
+  </script>
+  <style>
+    /* ── BASE RESET ── */
+    *, *::before, *::after { box-sizing: border-box; border: 0 solid #e5e7eb; }
+    html { -webkit-text-size-adjust: 100%; font-family: 'DM Sans', Helvetica Neue, Helvetica, Arial, sans-serif; line-height: 1.5; }
+    body { margin: 0; -webkit-font-smoothing: antialiased; background: #f4f6f8; color: #111; }
+    h1,h2,h3,h4,h5,h6,p,ul,ol { margin: 0; padding: 0; }
+    a { color: inherit; text-decoration: inherit; }
+    img, svg { display: block; max-width: 100%; height: auto; }
+    :root { --eyeco-black:#000; --eyeco-dark-blue:#27455c; --eyeco-teal:#00f5d0; --eyeco-data-teal:#01a39e; --eyeco-white:#fff; --eyeco-slate:#999; --eyeco-bg:#f4f6f8; --eyeco-border:#dde3ea; }
+    :focus-visible { outline: 2px solid #01a39e; outline-offset: 2px; border-radius: 4px; }
+    @media (max-width: 768px) { .header-inner, .footer-inner { width: 92% !important; } .site-nav { display: none; } }
+
+    /* ── HEADER ── */
+    .site-header { position: sticky; top: 0; z-index: 100; background: #000; height: 64px; display: flex; align-items: center; border-bottom: 1px solid #1a1a1a; }
+    .header-inner { width: 80%; max-width: 1280px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+    .site-logo { display: flex; align-items: center; text-decoration: none; }
+    .site-logo img { height: 32px; width: auto; }
+    .site-nav { display: flex; align-items: center; gap: 28px; }
+    .site-nav > a { color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; text-decoration: none; transition: color 0.15s; }
+    .site-nav > a:hover { color: #fff; }
+    .site-nav > a.active { color: #00f5d0; }
+    .nav-dropdown { position: relative; display: flex; align-items: center; }
+    .nav-dropdown-btn { background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 5px; color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; padding: 0; transition: color 0.15s; }
+    .nav-dropdown-btn:hover, .nav-dropdown.is-open .nav-dropdown-btn { color: #fff; }
+    .nav-dropdown-icon { transition: transform 0.2s; }
+    .nav-dropdown.is-open .nav-dropdown-icon { transform: rotate(180deg); }
+    .nav-dropdown-menu { display: none; position: absolute; top: calc(100% + 16px); right: -8px; background: #111; border: 1px solid #2a2a2a; border-radius: 8px; padding: 6px; min-width: 190px; z-index: 200; box-shadow: 0 8px 24px rgba(0,0,0,0.5); }
+    .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+    .nav-dropdown-menu a { display: block; padding: 9px 14px; color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; text-decoration: none; border-radius: 5px; transition: background 0.1s, color 0.1s; }
+    .nav-dropdown-menu a:hover { background: #1e1e1e; color: #fff; }
+    .nav-dropdown-menu a.active { color: #00f5d0; }
+
+    /* ── FOOTER ── */
+    .site-footer { background: #000; border-top: 1px solid #1a1a1a; padding: 60px 0 0; margin-top: 80px; }
+    .footer-inner { width: 80%; max-width: 1280px; margin: 0 auto; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 48px; border-bottom: 1px solid #1a1a1a; }
+    .footer-logo { display: flex; }
+    .footer-logo img { height: 28px; width: auto; }
+    .footer-tagline { font-family: 'DM Sans', sans-serif; font-size: 13px; color: #666; line-height: 1.6; margin-top: 12px; max-width: 220px; }
+    .footer-col { display: flex; flex-direction: column; gap: 10px; }
+    .footer-col-label { font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #555; margin-bottom: 4px; }
+    .footer-col a { font-family: 'DM Sans', sans-serif; font-size: 14px; color: #888; text-decoration: none; transition: color 0.15s; }
+    .footer-col a:hover { color: #fff; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; flex-wrap: wrap; gap: 12px; }
+    .footer-copy { font-family: 'DM Sans', sans-serif; font-size: 12px; color: #444; }
+    .footer-bottom-links { display: flex; gap: 20px; }
+    .footer-bottom-links a { font-family: 'DM Sans', sans-serif; font-size: 12px; color: #444; text-decoration: none; transition: color 0.15s; }
+    .footer-bottom-links a:hover { color: #fff; }
+    @media (max-width: 768px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── PAGE HERO ── */
+    .page-hero {
+      background: #000;
+      padding: 72px 0 64px;
+      text-align: center;
+    }
+    .page-hero-inner {
+      width: 80%;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .hero-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #01a39e;
+      margin-bottom: 18px;
+    }
+    .page-hero h1 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(32px, 4.5vw, 48px);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .hero-subtitle {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      color: #666;
+    }
+
+    /* ── LEGAL CONTENT ── */
+    .legal-wrap {
+      width: 80%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 56px 0 0;
+      display: flex;
+      justify-content: center;
+    }
+    .legal-card {
+      background: #fff;
+      border: 1px solid #dde3ea;
+      border-radius: 16px;
+      padding: 52px 56px;
+      width: 100%;
+      max-width: 720px;
+    }
+    .legal-section {
+      margin-bottom: 40px;
+    }
+    .legal-section:last-child { margin-bottom: 0; }
+    .legal-section h2 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eef0f3;
+    }
+    .legal-section p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      color: #444;
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+    .legal-section p:last-child { margin-bottom: 0; }
+    .legal-section a {
+      color: #01a39e;
+      text-decoration: underline;
+    }
+    .legal-section a:hover { color: #018c88; }
+    .legal-toc {
+      background: #f9fafb;
+      border: 1px solid #eef0f3;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+    }
+    .legal-toc p {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 10px;
+    }
+    .legal-toc ol {
+      list-style: decimal;
+      padding-left: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .legal-toc li a {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: #01a39e;
+      text-decoration: none;
+    }
+    .legal-toc li a:hover { text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      .legal-wrap { width: 92%; }
+      .legal-card { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="/" class="site-logo" aria-label="Eyecosystems home">
+        <img src="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png" alt="Eyecosystems logo" width="32" height="32" />
+      </a>
+      <nav class="site-nav" role="navigation" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/our-data">Our Data</a>
+        <div class="nav-dropdown" id="about-dropdown">
+          <button class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false" aria-controls="about-menu">
+            About
+            <svg class="nav-dropdown-icon" width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M2 3.5l3.5 3.5 3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="nav-dropdown-menu" id="about-menu" role="menu">
+            <a href="/about" role="menuitem">About Eyecosystems</a>
+            <a href="/blog" role="menuitem">Blog</a>
+          </div>
+        </div>
+        <a href="/docs">Docs</a>
+        <a href="/investors">Investors</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="page-hero" aria-labelledby="hero-heading">
+    <div class="page-hero-inner">
+      <p class="hero-label">Legal</p>
+      <h1 id="hero-heading">Privacy Policy</h1>
+      <p class="hero-subtitle">Last updated: April 12, 2026</p>
+    </div>
+  </section>
+
+  <!-- LEGAL CONTENT -->
+  <main>
+    <div class="legal-wrap">
+      <article class="legal-card" aria-label="Privacy Policy">
+
+        <nav class="legal-toc" aria-label="Table of contents">
+          <p>Contents</p>
+          <ol>
+            <li><a href="#information-we-collect">Information We Collect</a></li>
+            <li><a href="#how-we-use">How We Use Your Information</a></li>
+            <li><a href="#data-sharing">Data Sharing and Disclosure</a></li>
+            <li><a href="#data-retention">Data Retention</a></li>
+            <li><a href="#cookies">Cookies and Tracking</a></li>
+            <li><a href="#your-rights">Your Rights</a></li>
+            <li><a href="#security">Security</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+          </ol>
+        </nav>
+
+        <div class="legal-section" id="information-we-collect">
+          <h2>1. Information We Collect</h2>
+          <p>Eyecosystems, LLC ("Eyecosystems," "we," "our," or "us") collects information you provide directly to us when you use our website, request a demo, create an account, or communicate with our team. This includes name, work email address, job title, organization name, and any messages or details you submit through our contact or demo request forms.</p>
+          <p>We also collect information automatically when you visit our website, including your IP address, browser type, operating system, referring URLs, pages viewed, and the dates and times of your visits. This data is collected through standard server logs and analytics tools such as Google Analytics.</p>
+          <p>If you become a paying customer or API subscriber, we collect billing information through our payment processor. We do not store full credit card numbers on our own systems. Payment data is handled in accordance with PCI DSS standards by our third-party payment provider.</p>
+        </div>
+
+        <div class="legal-section" id="how-we-use">
+          <h2>2. How We Use Your Information</h2>
+          <p>We use the information we collect to operate, maintain, and improve our platform and services; to respond to demo requests and customer inquiries; to send transactional communications such as account confirmations, API documentation updates, and invoice receipts; and to deliver the data products you have licensed from us.</p>
+          <p>With your consent, we may send you product updates, compliance-related news, and information about new dataset releases. You may opt out of marketing communications at any time by clicking the unsubscribe link in any email or by contacting us directly. Transactional and service communications are not subject to marketing opt-outs.</p>
+          <p>We use aggregated, de-identified usage data to understand how our platform is used, to troubleshoot technical issues, and to improve product features. This data cannot reasonably be used to identify any individual.</p>
+        </div>
+
+        <div class="legal-section" id="data-sharing">
+          <h2>3. Data Sharing and Disclosure</h2>
+          <p>Eyecosystems does not sell, rent, or trade your personal information to third parties for their own marketing purposes. We share information only as described in this policy or with your explicit consent.</p>
+          <p>We engage trusted third-party service providers to support our operations, including cloud hosting providers, payment processors, CRM platforms, and analytics services. These providers are contractually required to use your information solely on our behalf and in accordance with our instructions and applicable law.</p>
+          <p>We may disclose your information if required by applicable law, regulation, legal process, or governmental request; to protect the rights, property, or safety of Eyecosystems, our customers, or others; or in connection with a merger, acquisition, or sale of substantially all of our assets, in which case we will provide notice before your information is transferred and becomes subject to a different privacy policy.</p>
+        </div>
+
+        <div class="legal-section" id="data-retention">
+          <h2>4. Data Retention</h2>
+          <p>We retain personal information for as long as necessary to fulfill the purposes described in this policy, to comply with our legal and contractual obligations, to resolve disputes, and to enforce our agreements. For active customer accounts, we retain account and usage data for the duration of the subscription plus a period of three years following account closure, unless a longer retention period is required by law.</p>
+          <p>Demo request and inquiry data is retained for up to two years from the date of initial contact. If no commercial relationship develops within that period, we will delete or anonymize the data. You may request earlier deletion at any time by contacting us at the address listed below.</p>
+          <p>Analytics and log data collected through automated means is typically retained in identifiable form for up to 26 months, after which it is aggregated or deleted. These retention schedules may be adjusted to comply with applicable legal requirements or legitimate business needs.</p>
+        </div>
+
+        <div class="legal-section" id="cookies">
+          <h2>5. Cookies and Tracking</h2>
+          <p>Our website uses cookies and similar tracking technologies to remember your preferences, analyze site traffic, and support analytics features. Strictly necessary cookies are required for the website to function and cannot be disabled. Analytics cookies, such as those set by Google Analytics, help us understand how visitors interact with our site; these can be disabled via your browser settings or by using the Google Analytics opt-out browser add-on.</p>
+          <p>We do not use third-party advertising cookies or behavioral targeting cookies on our website. We do not participate in cross-site tracking networks for advertising purposes.</p>
+          <p>You can control cookies through your browser settings. Please note that disabling certain cookies may affect the functionality of our website. For more information about cookies and how to manage them, visit <a href="https://www.allaboutcookies.org" target="_blank" rel="noopener noreferrer">allaboutcookies.org</a>.</p>
+        </div>
+
+        <div class="legal-section" id="your-rights">
+          <h2>6. Your Rights</h2>
+          <p>Depending on your jurisdiction, you may have certain rights regarding your personal information, including the right to access the personal data we hold about you; the right to request correction of inaccurate information; the right to request deletion of your personal data, subject to certain exceptions; and the right to object to or restrict certain types of processing.</p>
+          <p>Florida residents may have additional rights under applicable state law. Residents of other U.S. states or countries may have rights under their respective privacy laws. We will honor applicable rights requests regardless of your location to the extent feasible and legally required.</p>
+          <p>To exercise any of these rights, please contact us using the information in the "Contact Us" section below. We will respond to verified requests within 45 days. We may need to verify your identity before processing your request, and in some cases we may be unable to fulfill a request due to legal or contractual obligations.</p>
+        </div>
+
+        <div class="legal-section" id="security">
+          <h2>7. Security</h2>
+          <p>We implement and maintain administrative, technical, and physical safeguards designed to protect your personal information against unauthorized access, disclosure, alteration, or destruction. Our infrastructure is hosted on SOC 2-compliant cloud platforms, data in transit is encrypted using TLS 1.2 or higher, and access to customer data is restricted to authorized personnel on a need-to-know basis.</p>
+          <p>Despite these measures, no security system is impenetrable, and we cannot guarantee the absolute security of your information. In the event of a data breach that poses a risk to your rights and freedoms, we will notify you and the appropriate authorities as required by applicable law.</p>
+          <p>We encourage you to use strong, unique passwords for any accounts you hold with us and to contact us immediately at <a href="mailto:contact@eyecosystems.com">contact@eyecosystems.com</a> if you suspect any unauthorized use of your account or any other security concern.</p>
+        </div>
+
+        <div class="legal-section" id="contact-us">
+          <h2>8. Contact Us</h2>
+          <p>If you have questions about this Privacy Policy, wish to exercise your privacy rights, or want to report a concern, please contact us:</p>
+          <p>
+            <strong>Eyecosystems, LLC</strong><br />
+            Jacksonville, FL<br />
+            Email: <a href="mailto:contact@eyecosystems.com">contact@eyecosystems.com</a>
+          </p>
+          <p>We take all privacy inquiries seriously and will respond within 5 business days. If you are not satisfied with our response, you may have the right to lodge a complaint with the relevant data protection authority in your jurisdiction.</p>
+        </div>
+
+      </article>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="/" class="footer-logo" aria-label="Eyecosystems home">
+            <img src="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png" alt="Eyecosystems" width="28" height="28" />
+          </a>
+          <p class="footer-tagline">Human-verified accessibility data for ADA Title II compliance.</p>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-label">Product</p>
+          <a href="/our-data">Our Data</a>
+          <a href="/docs">Docs</a>
+          <a href="/book-demo">Book Demo</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-label">Company</p>
+          <a href="/about">About</a>
+          <a href="/blog">Blog</a>
+          <a href="/investors">Investors</a>
+          <a href="/contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-label">Legal</p>
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+          <a href="/accessibility-policy">Accessibility</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">&copy; 2026 Eyecosystems. All rights reserved. Jacksonville, FL.</span>
+        <nav class="footer-bottom-links" aria-label="Legal navigation">
+          <a href="/privacy">Privacy</a>
+          <a href="/terms">Terms</a>
+          <a href="/contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.nav-dropdown').forEach(function(el) {
+      var btn = el.querySelector('.nav-dropdown-btn');
+      btn.addEventListener('click', function(e) { e.stopPropagation(); var o = el.classList.toggle('is-open'); btn.setAttribute('aria-expanded', o); });
+    });
+    document.addEventListener('click', function() {
+      document.querySelectorAll('.nav-dropdown').forEach(function(el) { el.classList.remove('is-open'); var b = el.querySelector('.nav-dropdown-btn'); if (b) b.setAttribute('aria-expanded', 'false'); });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — Eyecosystems</title>
+  <meta name="description" content="Eyecosystems terms of service. Rules governing use of our data platform and API." />
+  <link rel="canonical" href="https://eyecosystems.com/terms" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-940W81LPR1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-940W81LPR1');
+  </script>
+  <style>
+    /* ── BASE RESET ── */
+    *, *::before, *::after { box-sizing: border-box; border: 0 solid #e5e7eb; }
+    html { -webkit-text-size-adjust: 100%; font-family: 'DM Sans', Helvetica Neue, Helvetica, Arial, sans-serif; line-height: 1.5; }
+    body { margin: 0; -webkit-font-smoothing: antialiased; background: #f4f6f8; color: #111; }
+    h1,h2,h3,h4,h5,h6,p,ul,ol { margin: 0; padding: 0; }
+    a { color: inherit; text-decoration: inherit; }
+    img, svg { display: block; max-width: 100%; height: auto; }
+    :root { --eyeco-black:#000; --eyeco-dark-blue:#27455c; --eyeco-teal:#00f5d0; --eyeco-data-teal:#01a39e; --eyeco-white:#fff; --eyeco-slate:#999; --eyeco-bg:#f4f6f8; --eyeco-border:#dde3ea; }
+    :focus-visible { outline: 2px solid #01a39e; outline-offset: 2px; border-radius: 4px; }
+    @media (max-width: 768px) { .header-inner, .footer-inner { width: 92% !important; } .site-nav { display: none; } }
+
+    /* ── HEADER ── */
+    .site-header { position: sticky; top: 0; z-index: 100; background: #000; height: 64px; display: flex; align-items: center; border-bottom: 1px solid #1a1a1a; }
+    .header-inner { width: 80%; max-width: 1280px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+    .site-logo { display: flex; align-items: center; text-decoration: none; }
+    .site-logo img { height: 32px; width: auto; }
+    .site-nav { display: flex; align-items: center; gap: 28px; }
+    .site-nav > a { color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; text-decoration: none; transition: color 0.15s; }
+    .site-nav > a:hover { color: #fff; }
+    .site-nav > a.active { color: #00f5d0; }
+    .nav-dropdown { position: relative; display: flex; align-items: center; }
+    .nav-dropdown-btn { background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 5px; color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; padding: 0; transition: color 0.15s; }
+    .nav-dropdown-btn:hover, .nav-dropdown.is-open .nav-dropdown-btn { color: #fff; }
+    .nav-dropdown-icon { transition: transform 0.2s; }
+    .nav-dropdown.is-open .nav-dropdown-icon { transform: rotate(180deg); }
+    .nav-dropdown-menu { display: none; position: absolute; top: calc(100% + 16px); right: -8px; background: #111; border: 1px solid #2a2a2a; border-radius: 8px; padding: 6px; min-width: 190px; z-index: 200; box-shadow: 0 8px 24px rgba(0,0,0,0.5); }
+    .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+    .nav-dropdown-menu a { display: block; padding: 9px 14px; color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; text-decoration: none; border-radius: 5px; transition: background 0.1s, color 0.1s; }
+    .nav-dropdown-menu a:hover { background: #1e1e1e; color: #fff; }
+    .nav-dropdown-menu a.active { color: #00f5d0; }
+
+    /* ── FOOTER ── */
+    .site-footer { background: #000; border-top: 1px solid #1a1a1a; padding: 60px 0 0; margin-top: 80px; }
+    .footer-inner { width: 80%; max-width: 1280px; margin: 0 auto; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 48px; border-bottom: 1px solid #1a1a1a; }
+    .footer-logo { display: flex; }
+    .footer-logo img { height: 28px; width: auto; }
+    .footer-tagline { font-family: 'DM Sans', sans-serif; font-size: 13px; color: #666; line-height: 1.6; margin-top: 12px; max-width: 220px; }
+    .footer-col { display: flex; flex-direction: column; gap: 10px; }
+    .footer-col-label { font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #555; margin-bottom: 4px; }
+    .footer-col a { font-family: 'DM Sans', sans-serif; font-size: 14px; color: #888; text-decoration: none; transition: color 0.15s; }
+    .footer-col a:hover { color: #fff; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; flex-wrap: wrap; gap: 12px; }
+    .footer-copy { font-family: 'DM Sans', sans-serif; font-size: 12px; color: #444; }
+    .footer-bottom-links { display: flex; gap: 20px; }
+    .footer-bottom-links a { font-family: 'DM Sans', sans-serif; font-size: 12px; color: #444; text-decoration: none; transition: color 0.15s; }
+    .footer-bottom-links a:hover { color: #fff; }
+    @media (max-width: 768px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── PAGE HERO ── */
+    .page-hero {
+      background: #000;
+      padding: 72px 0 64px;
+      text-align: center;
+    }
+    .page-hero-inner {
+      width: 80%;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .hero-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #01a39e;
+      margin-bottom: 18px;
+    }
+    .page-hero h1 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(32px, 4.5vw, 48px);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .hero-subtitle {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      color: #666;
+    }
+
+    /* ── LEGAL CONTENT ── */
+    .legal-wrap {
+      width: 80%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 56px 0 0;
+      display: flex;
+      justify-content: center;
+    }
+    .legal-card {
+      background: #fff;
+      border: 1px solid #dde3ea;
+      border-radius: 16px;
+      padding: 52px 56px;
+      width: 100%;
+      max-width: 720px;
+    }
+    .legal-section {
+      margin-bottom: 40px;
+    }
+    .legal-section:last-child { margin-bottom: 0; }
+    .legal-section h2 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eef0f3;
+    }
+    .legal-section p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      color: #444;
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+    .legal-section p:last-child { margin-bottom: 0; }
+    .legal-section a {
+      color: #01a39e;
+      text-decoration: underline;
+    }
+    .legal-section a:hover { color: #018c88; }
+    .legal-toc {
+      background: #f9fafb;
+      border: 1px solid #eef0f3;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+    }
+    .legal-toc p {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 10px;
+    }
+    .legal-toc ol {
+      list-style: decimal;
+      padding-left: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .legal-toc li a {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: #01a39e;
+      text-decoration: none;
+    }
+    .legal-toc li a:hover { text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      .legal-wrap { width: 92%; }
+      .legal-card { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="/" class="site-logo" aria-label="Eyecosystems home">
+        <img src="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png" alt="Eyecosystems logo" width="32" height="32" />
+      </a>
+      <nav class="site-nav" role="navigation" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/our-data">Our Data</a>
+        <div class="nav-dropdown" id="about-dropdown">
+          <button class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false" aria-controls="about-menu">
+            About
+            <svg class="nav-dropdown-icon" width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M2 3.5l3.5 3.5 3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="nav-dropdown-menu" id="about-menu" role="menu">
+            <a href="/about" role="menuitem">About Eyecosystems</a>
+            <a href="/blog" role="menuitem">Blog</a>
+          </div>
+        </div>
+        <a href="/docs">Docs</a>
+        <a href="/investors">Investors</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="page-hero" aria-labelledby="hero-heading">
+    <div class="page-hero-inner">
+      <p class="hero-label">Legal</p>
+      <h1 id="hero-heading">Terms of Service</h1>
+      <p class="hero-subtitle">Last updated: April 12, 2026</p>
+    </div>
+  </section>
+
+  <!-- LEGAL CONTENT -->
+  <main>
+    <div class="legal-wrap">
+      <article class="legal-card" aria-label="Terms of Service">
+
+        <nav class="legal-toc" aria-label="Table of contents">
+          <p>Contents</p>
+          <ol>
+            <li><a href="#acceptance">Acceptance of Terms</a></li>
+            <li><a href="#use-of-service">Use of the Service</a></li>
+            <li><a href="#data-license">Data License and Restrictions</a></li>
+            <li><a href="#api-access">API Access</a></li>
+            <li><a href="#payment">Payment and Subscriptions</a></li>
+            <li><a href="#ip">Intellectual Property</a></li>
+            <li><a href="#disclaimers">Disclaimers and Limitation of Liability</a></li>
+            <li><a href="#termination">Termination</a></li>
+            <li><a href="#governing-law">Governing Law</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ol>
+        </nav>
+
+        <div class="legal-section" id="acceptance">
+          <h2>1. Acceptance of Terms</h2>
+          <p>These Terms of Service ("Terms") constitute a legally binding agreement between you, or the entity you represent ("Customer," "you," or "your"), and Eyecosystems, LLC, a Florida limited liability company ("Eyecosystems," "we," "our," or "us"). By accessing or using the Eyecosystems website, data platform, or API (collectively, the "Service"), you acknowledge that you have read, understood, and agree to be bound by these Terms and our Privacy Policy, which is incorporated herein by reference.</p>
+          <p>If you are accessing the Service on behalf of an organization, you represent and warrant that you have the authority to bind that organization to these Terms. If you do not have such authority, or if you do not agree with these Terms, you must not access or use the Service.</p>
+          <p>We reserve the right to modify these Terms at any time. We will notify you of material changes by email or by posting a notice on our website. Your continued use of the Service after the effective date of any revision constitutes your acceptance of the updated Terms.</p>
+        </div>
+
+        <div class="legal-section" id="use-of-service">
+          <h2>2. Use of the Service</h2>
+          <p>You agree to use the Service only for lawful purposes and in accordance with these Terms. You shall not use the Service in any way that violates applicable federal, state, or local laws or regulations; infringes the rights of any third party; transmits any unsolicited communications; or attempts to gain unauthorized access to our systems or data.</p>
+          <p>You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. You agree to notify us immediately at <a href="mailto:contact@eyecosystems.com">contact@eyecosystems.com</a> if you suspect any unauthorized access or breach of your account security. Eyecosystems is not liable for any loss or damage arising from your failure to maintain account security.</p>
+          <p>We reserve the right, without notice and at our sole discretion, to investigate suspected violations of these Terms, and to suspend or terminate access to the Service for any user or organization we reasonably determine is in breach of these Terms or applicable law.</p>
+        </div>
+
+        <div class="legal-section" id="data-license">
+          <h2>3. Data License and Restrictions</h2>
+          <p>Subject to your timely payment of applicable fees and your compliance with these Terms, Eyecosystems grants you a limited, non-exclusive, non-transferable, non-sublicensable license to access and use the accessibility datasets and associated records ("Data") solely for your internal business purposes and in accordance with your subscription tier and any associated order documentation.</p>
+          <p>You may not resell, redistribute, sublicense, or otherwise make the Data available to any third party without Eyecosystems' prior written consent. You may not use the Data to build a competing data product or service, train machine learning models intended for commercial sale, or reverse engineer the data collection methodologies or field verification protocols that underlie the dataset.</p>
+          <p>You may incorporate Data into derivative works for your own internal compliance reporting, provided that any such derivative work does not disclose or republish the underlying raw records in a manner that would effectively substitute for a subscription to the Service. All rights not expressly granted herein are reserved by Eyecosystems.</p>
+        </div>
+
+        <div class="legal-section" id="api-access">
+          <h2>4. API Access</h2>
+          <p>API access is available to customers on eligible subscription plans. Your use of the Eyecosystems API is subject to rate limits, authentication requirements, and usage policies as documented in our developer documentation at eyecosystems.com/docs. We reserve the right to modify, throttle, or discontinue API endpoints with reasonable advance notice.</p>
+          <p>You are responsible for securing your API keys and must not embed them in publicly accessible code repositories, client-side scripts, or any publicly visible environment. If an API key is compromised, you must rotate it immediately through your account dashboard and notify us promptly.</p>
+          <p>Automated scraping or bulk extraction of data via the API in excess of your licensed usage limits is prohibited. We may monitor API usage patterns and take action, including suspension of API access, if we detect usage that exceeds plan limits or violates these Terms.</p>
+        </div>
+
+        <div class="legal-section" id="payment">
+          <h2>5. Payment and Subscriptions</h2>
+          <p>Access to paid features of the Service requires a valid subscription. Fees are billed in advance on a monthly or annual basis, depending on the plan selected. All fees are quoted in U.S. dollars and are non-refundable except as expressly stated in these Terms or required by applicable law. We reserve the right to change subscription pricing with at least 30 days' advance written notice for existing customers.</p>
+          <p>If your payment fails, we will notify you and may suspend access to the Service until outstanding amounts are paid. If payment is not received within 14 days of a failed charge, we may terminate your subscription and delete associated data in accordance with our data retention policy. You are responsible for all taxes, duties, and similar charges associated with your subscription, excluding taxes on Eyecosystems' net income.</p>
+          <p>Annual subscriptions may be cancelled at any time; however, we do not provide prorated refunds for unused portions of an annual term unless required by applicable law. Monthly subscriptions may be cancelled at any time effective at the end of the current billing period. Upon cancellation, your access to paid features will continue until the end of the paid period.</p>
+        </div>
+
+        <div class="legal-section" id="ip">
+          <h2>6. Intellectual Property</h2>
+          <p>The Service, including all software, datasets, documentation, visual design, trademarks, and content (collectively, "Eyecosystems IP"), is owned by or licensed to Eyecosystems and is protected by U.S. and international intellectual property laws. Nothing in these Terms transfers ownership of any Eyecosystems IP to you.</p>
+          <p>You retain ownership of any data, content, or materials you submit to the Service ("Customer Content"). By submitting Customer Content, you grant Eyecosystems a limited, royalty-free license to use such content solely to provide and improve the Service. We will not use your Customer Content for any purpose beyond what is reasonably necessary to deliver the Service to you.</p>
+          <p>Any feedback, suggestions, or ideas you provide regarding the Service may be used by Eyecosystems without restriction or compensation to you. We appreciate your input and will consider it as part of our ongoing product development, but we are under no obligation to implement any suggestion.</p>
+        </div>
+
+        <div class="legal-section" id="disclaimers">
+          <h2>7. Disclaimers and Limitation of Liability</h2>
+          <p>THE SERVICE AND ALL DATA ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR ACCURACY. EYECOSYSTEMS DOES NOT WARRANT THAT THE SERVICE WILL BE UNINTERRUPTED, ERROR-FREE, OR FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS. YOUR USE OF THE SERVICE IS AT YOUR SOLE RISK.</p>
+          <p>While Eyecosystems uses trained human auditors to verify accessibility data, we cannot guarantee that every record is complete, current, or error-free. You are solely responsible for independently verifying the accuracy of any Data before relying on it for legal, regulatory, or compliance purposes. Nothing in these Terms or in the Data constitutes legal advice.</p>
+          <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL EYECOSYSTEMS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING LOST PROFITS, ARISING FROM YOUR USE OF OR INABILITY TO USE THE SERVICE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. EYECOSYSTEMS' TOTAL LIABILITY FOR ANY CLAIM ARISING UNDER THESE TERMS SHALL NOT EXCEED THE AMOUNTS PAID BY YOU FOR THE SERVICE IN THE 12 MONTHS PRECEDING THE CLAIM.</p>
+        </div>
+
+        <div class="legal-section" id="termination">
+          <h2>8. Termination</h2>
+          <p>Either party may terminate these Terms upon written notice if the other party materially breaches these Terms and fails to cure such breach within 30 days of written notice specifying the breach in reasonable detail. Eyecosystems may terminate or suspend your access immediately, without prior notice, if we reasonably believe that you are using the Service in a manner that violates applicable law, poses a security risk, or could expose us or others to liability.</p>
+          <p>Upon termination for any reason, your license to use the Service and the Data will immediately cease. Sections that by their nature should survive termination — including intellectual property, disclaimers, limitation of liability, and governing law — will survive. You must promptly delete or destroy any copies of the Data in your possession upon termination, except as required to be retained by applicable law.</p>
+          <p>If your subscription is terminated by Eyecosystems for convenience (not for cause), we will provide a prorated refund for any prepaid unused subscription period. No refund is owed if termination is due to your breach of these Terms.</p>
+        </div>
+
+        <div class="legal-section" id="governing-law">
+          <h2>9. Governing Law</h2>
+          <p>These Terms shall be governed by and construed in accordance with the laws of the State of Florida, without regard to its conflict of laws principles. Any dispute arising out of or relating to these Terms or your use of the Service shall be submitted to the exclusive jurisdiction of the state and federal courts located in Duval County, Florida, and you hereby consent to personal jurisdiction in such courts.</p>
+          <p>Before initiating any formal dispute proceedings, the parties agree to attempt to resolve any dispute informally by contacting the other party in writing and allowing 30 days for a good-faith resolution. Nothing in this section prevents either party from seeking injunctive or other equitable relief in any court of competent jurisdiction to prevent irreparable harm.</p>
+          <p>If any provision of these Terms is held by a court of competent jurisdiction to be invalid or unenforceable, the remaining provisions will continue in full force and effect. The failure of Eyecosystems to enforce any right or provision of these Terms shall not constitute a waiver of such right or provision.</p>
+        </div>
+
+        <div class="legal-section" id="contact">
+          <h2>10. Contact</h2>
+          <p>If you have questions about these Terms of Service or need to reach us for any legal matter related to your use of the Service, please contact:</p>
+          <p>
+            <strong>Eyecosystems, LLC</strong><br />
+            Jacksonville, FL<br />
+            Email: <a href="mailto:contact@eyecosystems.com">contact@eyecosystems.com</a>
+          </p>
+          <p>We will respond to all inquiries within 5 business days. For urgent security concerns, please indicate "URGENT" in the subject line of your email.</p>
+        </div>
+
+      </article>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="/" class="footer-logo" aria-label="Eyecosystems home">
+            <img src="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png" alt="Eyecosystems" width="28" height="28" />
+          </a>
+          <p class="footer-tagline">Human-verified accessibility data for ADA Title II compliance.</p>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-label">Product</p>
+          <a href="/our-data">Our Data</a>
+          <a href="/docs">Docs</a>
+          <a href="/book-demo">Book Demo</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-label">Company</p>
+          <a href="/about">About</a>
+          <a href="/blog">Blog</a>
+          <a href="/investors">Investors</a>
+          <a href="/contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-label">Legal</p>
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+          <a href="/accessibility-policy">Accessibility</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">&copy; 2026 Eyecosystems. All rights reserved. Jacksonville, FL.</span>
+        <nav class="footer-bottom-links" aria-label="Legal navigation">
+          <a href="/privacy">Privacy</a>
+          <a href="/terms">Terms</a>
+          <a href="/contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.nav-dropdown').forEach(function(el) {
+      var btn = el.querySelector('.nav-dropdown-btn');
+      btn.addEventListener('click', function(e) { e.stopPropagation(); var o = el.classList.toggle('is-open'); btn.setAttribute('aria-expanded', o); });
+    });
+    document.addEventListener('click', function() {
+      document.querySelectorAll('.nav-dropdown').forEach(function(el) { el.classList.remove('is-open'); var b = el.querySelector('.nav-dropdown-btn'); if (b) b.setAttribute('aria-expanded', 'false'); });
+    });
+  </script>
+</body>
+</html>
