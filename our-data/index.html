@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#000000" />
+
+    <title>Our Data — Eyecosystems | Blind & Low Vision Community Data Florida</title>
+    <meta name="description" content="Structured, human-verified blind and low vision community data for ADA Title II compliance. Machine-readable knowledge graph of BVI organizations, events, and service providers in Florida and beyond." />
+
+    <link rel="canonical" href="https://eyecosystems.com/our-data" />
+    <link rel="icon" type="image/png" href="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png" />
+    <link rel="apple-touch-icon" href="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Eyecosystems" />
+    <meta property="og:url" content="https://eyecosystems.com/our-data" />
+    <meta property="og:title" content="Our Data — Eyecosystems | Blind & Low Vision Community Data Florida" />
+    <meta property="og:description" content="Machine-readable, human-verified blind and low-vision community data for ADA Title II compliance. Jacksonville-first, expanding nationally." />
+    <meta property="og:image" content="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@eyecosystems" />
+    <meta name="twitter:title" content="Our Data — Eyecosystems" />
+    <meta name="twitter:description" content="Machine-readable, human-verified blind and low-vision community data for ADA Title II compliance." />
+
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-940W81LPR1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-940W81LPR1');
+    </script>
+
+    <style>
+      /* ─── Reset & tokens ─── */
+      *, *::before, *::after { box-sizing: border-box; border: 0 solid #e5e7eb; }
+      html { -webkit-text-size-adjust: 100%; font-family: 'DM Sans', Helvetica Neue, Helvetica, Arial, sans-serif; line-height: 1.5; }
+      body { margin: 0; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; background: #f4f6f8; color: #111; }
+      h1,h2,h3,h4,h5,h6,p,ul,ol { margin: 0; padding: 0; }
+      a { color: inherit; text-decoration: inherit; }
+      img, svg { display: block; max-width: 100%; height: auto; }
+      :root {
+        --eyeco-black: #000;
+        --eyeco-dark-blue: #27455c;
+        --eyeco-teal: #00f5d0;
+        --eyeco-data-teal: #01a39e;
+        --eyeco-white: #fff;
+        --eyeco-slate: #999;
+        --eyeco-bg: #f4f6f8;
+        --eyeco-border: #dde3ea;
+      }
+      :focus-visible { outline: 2px solid #01a39e; outline-offset: 2px; border-radius: 4px; }
+
+      /* ─── Header ─── */
+      .site-header {
+        position: sticky; top: 0; z-index: 100;
+        background: var(--eyeco-black); height: 64px;
+        display: flex; align-items: center;
+        border-bottom: 1px solid #1a1a1a;
+      }
+      .header-inner {
+        width: 80%; max-width: 1280px; margin: 0 auto;
+        display: flex; align-items: center; justify-content: space-between;
+      }
+      .header-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+      .header-logo img { height: 32px; width: auto; }
+      .header-logo-name { color: var(--eyeco-white); font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 0.02em; }
+      .header-nav { display: flex; align-items: center; gap: 28px; }
+      .header-nav a { color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; text-decoration: none; transition: color 0.15s; }
+      .header-nav a:hover { color: var(--eyeco-white); }
+      .header-nav a.active { color: var(--eyeco-teal); }
+      .nav-dropdown { position: relative; }
+      .nav-dropdown-btn {
+        background: none; border: none; cursor: pointer;
+        color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500;
+        padding: 0; display: flex; align-items: center; gap: 4px; transition: color 0.15s;
+      }
+      .nav-dropdown-btn:hover { color: #fff; }
+      .nav-dropdown-btn svg { transition: transform 0.2s; }
+      .nav-dropdown.is-open .nav-dropdown-btn svg { transform: rotate(180deg); }
+      .nav-dropdown-menu {
+        display: none; position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%);
+        background: #111; border: 1px solid #2a2a2a; border-radius: 8px;
+        min-width: 200px; padding: 6px 0; z-index: 200;
+      }
+      .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+      .nav-dropdown-menu a { display: block; padding: 10px 18px; color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; text-decoration: none; transition: color 0.15s, background 0.15s; }
+      .nav-dropdown-menu a:hover { color: #fff; background: #1a1a1a; }
+      .nav-dropdown-menu a.active { color: var(--eyeco-teal); }
+      @media (max-width: 768px) { .header-inner { width: 92%; } .header-nav { display: none; } }
+
+      /* ─── Page hero ─── */
+      .page-hero { background: var(--eyeco-black); padding: 72px 0 60px; border-bottom: 1px solid #1a1a1a; }
+      .page-hero-inner { width: 80%; max-width: 1280px; margin: 0 auto; }
+      .page-label { font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--eyeco-teal); margin-bottom: 16px; }
+      .page-h1 { font-family: 'DM Sans', sans-serif; font-size: clamp(32px, 5vw, 52px); font-weight: 800; color: var(--eyeco-white); line-height: 1.1; margin-bottom: 20px; max-width: 780px; }
+      .page-subtitle { font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 400; color: var(--eyeco-slate); max-width: 580px; line-height: 1.6; }
+
+      /* ─── Section utilities ─── */
+      .section-white { background: var(--eyeco-white); }
+      .section-light { background: var(--eyeco-bg); }
+      .section-dark { background: #0d1f2d; }
+      .section-inner { width: 80%; max-width: 1280px; margin: 0 auto; }
+      .section-pad { padding: 72px 0; }
+      .section-label { font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--eyeco-data-teal); margin-bottom: 12px; }
+      .section-h2 { font-family: 'DM Sans', sans-serif; font-size: clamp(26px, 4vw, 38px); font-weight: 800; color: var(--eyeco-black); line-height: 1.15; margin-bottom: 20px; }
+      .section-h2-light { color: var(--eyeco-white); }
+      .section-body { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 400; color: #444; line-height: 1.75; max-width: 680px; }
+
+      /* ─── Code block ─── */
+      .code-wrap {
+        background: #0d1117; border: 1px solid #2a2a2a; border-radius: 10px;
+        padding: 28px 32px; overflow-x: auto; margin-top: 32px;
+      }
+      .code-wrap pre {
+        margin: 0; font-family: 'Space Mono', monospace; font-size: 13px; line-height: 1.75;
+        color: #e6edf3; white-space: pre;
+      }
+      .code-key { color: #79c0ff; }
+      .code-str { color: #00f5d0; }
+      .code-bool { color: #ff7b72; }
+      .code-arr { color: #d2a8ff; }
+
+      /* ─── Pricing ─── */
+      .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+      .pricing-card {
+        background: var(--eyeco-white); border: 1px solid var(--eyeco-border);
+        border-radius: 14px; padding: 36px 28px; display: flex; flex-direction: column;
+        transition: box-shadow 0.2s;
+      }
+      .pricing-card:hover { box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
+      .pricing-card.featured { border: 2px solid var(--eyeco-teal); box-shadow: 0 4px 32px rgba(0,245,208,0.12); }
+      .pricing-tier-label { font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--eyeco-data-teal); margin-bottom: 12px; }
+      .pricing-tier-name { font-family: 'DM Sans', sans-serif; font-size: 22px; font-weight: 800; color: var(--eyeco-black); margin-bottom: 6px; }
+      .pricing-price { font-family: 'Space Mono', monospace; font-size: 32px; font-weight: 700; color: var(--eyeco-black); margin-bottom: 4px; }
+      .pricing-price span { font-size: 15px; font-weight: 400; color: var(--eyeco-slate); }
+      .pricing-desc { font-family: 'DM Sans', sans-serif; font-size: 14px; color: #666; margin-bottom: 24px; }
+      .pricing-divider { border-top: 1px solid var(--eyeco-border); margin: 0 0 20px; }
+      .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; flex: 1; }
+      .pricing-features li { display: flex; align-items: flex-start; gap: 10px; font-family: 'DM Sans', sans-serif; font-size: 14px; color: #444; line-height: 1.5; }
+      .pricing-features li::before { content: ''; width: 16px; height: 16px; border-radius: 50%; background: #e6f7f6; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%2301a39e' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: center; }
+      .btn-pricing { display: block; text-align: center; padding: 12px 24px; border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700; text-decoration: none; transition: opacity 0.15s, transform 0.1s; }
+      .btn-pricing:hover { opacity: 0.88; transform: translateY(-1px); }
+      .btn-outline { border: 1.5px solid var(--eyeco-border); color: var(--eyeco-dark-blue); }
+      .btn-teal { background: var(--eyeco-teal); color: var(--eyeco-black); }
+      .btn-dark { background: var(--eyeco-dark-blue); color: var(--eyeco-white); }
+
+      /* ─── Delivery options ─── */
+      .delivery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+      .delivery-card { background: var(--eyeco-white); border: 1px solid var(--eyeco-border); border-radius: 12px; padding: 28px; }
+      .delivery-icon { width: 44px; height: 44px; background: #0d1f2d; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+      .delivery-title { font-family: 'DM Sans', sans-serif; font-size: 17px; font-weight: 700; color: var(--eyeco-black); margin-bottom: 8px; }
+      .delivery-body { font-family: 'DM Sans', sans-serif; font-size: 14px; color: #555; line-height: 1.65; }
+      .delivery-link { display: inline-block; margin-top: 12px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600; color: var(--eyeco-data-teal); text-decoration: none; }
+      .delivery-link:hover { text-decoration: underline; }
+
+      /* ─── Compliance callout ─── */
+      .compliance-box { background: var(--eyeco-dark-blue); border-radius: 14px; padding: 40px 40px; margin-top: 0; }
+      .compliance-box .section-h2 { color: var(--eyeco-white); margin-bottom: 16px; }
+      .compliance-body { font-family: 'DM Sans', sans-serif; font-size: 16px; color: rgba(255,255,255,0.75); line-height: 1.75; max-width: 680px; }
+      .compliance-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+      .compliance-tag { font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; background: rgba(0,245,208,0.12); color: var(--eyeco-teal); border: 1px solid rgba(0,245,208,0.25); border-radius: 6px; padding: 4px 12px; }
+
+      /* ─── CTA ─── */
+      .cta-section { background: var(--eyeco-black); padding: 80px 0; }
+      .cta-inner { width: 80%; max-width: 1280px; margin: 0 auto; text-align: center; }
+      .cta-h2 { font-family: 'DM Sans', sans-serif; font-size: clamp(28px, 4vw, 40px); font-weight: 800; color: var(--eyeco-white); margin-bottom: 16px; }
+      .cta-body { font-family: 'DM Sans', sans-serif; font-size: 17px; color: rgba(255,255,255,0.65); max-width: 520px; margin: 0 auto 32px; line-height: 1.65; }
+      .btn-primary { display: inline-block; background: var(--eyeco-teal); color: var(--eyeco-black); font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 700; padding: 14px 32px; border-radius: 8px; text-decoration: none; transition: opacity 0.15s, transform 0.1s; }
+      .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+
+      /* ─── Footer ─── */
+      .site-footer { background: var(--eyeco-black); border-top: 1px solid #1a1a1a; padding: 64px 0 0; }
+      .footer-inner { width: 80%; max-width: 1280px; margin: 0 auto; }
+      .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid #1a1a1a; }
+      .footer-brand-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; text-decoration: none; }
+      .footer-brand-logo img { height: 28px; width: auto; }
+      .footer-brand-name { color: var(--eyeco-white); font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 700; }
+      .footer-tagline { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--eyeco-slate); line-height: 1.65; max-width: 260px; }
+      .footer-col-title { font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--eyeco-white); margin-bottom: 16px; }
+      .footer-col-links { display: flex; flex-direction: column; gap: 10px; list-style: none; }
+      .footer-col-links a { font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--eyeco-slate); text-decoration: none; transition: color 0.15s; }
+      .footer-col-links a:hover { color: var(--eyeco-white); }
+      .footer-bottom { padding: 24px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+      .footer-copy { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--eyeco-slate); }
+      .footer-bottom-links { display: flex; gap: 20px; }
+      .footer-bottom-links a { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--eyeco-slate); text-decoration: none; transition: color 0.15s; }
+      .footer-bottom-links a:hover { color: var(--eyeco-white); }
+
+      /* ─── Responsive ─── */
+      @media (max-width: 1024px) { .pricing-grid { grid-template-columns: 1fr; max-width: 480px; } }
+      @media (max-width: 900px) { .delivery-grid { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+      @media (max-width: 768px) {
+        .page-hero-inner, .section-inner, .cta-inner, .footer-inner { width: 92%; }
+        .pricing-grid { max-width: 100%; }
+        .footer-grid { grid-template-columns: 1fr; }
+        .footer-bottom { flex-direction: column; align-items: flex-start; }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <!-- ─── Header ─── -->
+    <header class="site-header" role="banner">
+      <div class="header-inner">
+        <a href="/" class="header-logo" aria-label="Eyecosystems home">
+          <img src="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png" alt="Eyecosystems logo" width="32" height="32" />
+          <span class="header-logo-name">Eyecosystems</span>
+        </a>
+        <nav class="header-nav" role="navigation" aria-label="Main navigation">
+          <a href="/">Home</a>
+          <a href="/our-data" class="active" aria-current="page">Our Data</a>
+          <div class="nav-dropdown" role="none">
+            <button class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false" aria-label="About menu">
+              About
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="nav-dropdown-menu" role="menu">
+              <a href="/about" role="menuitem">About Eyecosystems</a>
+              <a href="/blog" role="menuitem">Blog</a>
+            </div>
+          </div>
+          <a href="/docs">Docs</a>
+          <a href="/investors">Investors</a>
+          <a href="/contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ─── Page Hero ─── -->
+    <section class="page-hero" aria-label="Our Data page header">
+      <div class="page-hero-inner">
+        <p class="page-label">THE DATA</p>
+        <h1 class="page-h1">Structured BVI Community Data for ADA Title II Compliance</h1>
+        <p class="page-subtitle">Machine-readable. Human-verified. Jacksonville-first.</p>
+      </div>
+    </section>
+
+    <!-- ─── What the data is ─── -->
+    <section class="section-white section-pad" aria-labelledby="data-heading">
+      <div class="section-inner">
+        <p class="section-label">The Knowledge Graph</p>
+        <h2 class="section-h2" id="data-heading">A Knowledge Graph of Blind &amp; Low-Vision Community Resources</h2>
+        <p class="section-body">
+          Eyecosystems maintains a structured, machine-readable knowledge graph of blind and low-vision (BVI) community organizations, events, and service providers. Every record is verified by a trained human reviewer from the BVI community — not scraped, not AI-inferred.
+        </p>
+        <p class="section-body" style="margin-top: 16px;">
+          The dataset covers nonprofits, advocacy groups, peer support networks, assistive technology providers, educational resources, and government service liaisons. Each record includes verified contact information, service categories, geographic scope, and a full audit trail linking back to the human verifier.
+        </p>
+        <div class="code-wrap" role="region" aria-label="Sample JSON data record">
+          <pre><code>{
+  <span class="code-key">"eyeco_id"</span>: <span class="code-str">"jax-0042"</span>,
+  <span class="code-key">"name"</span>: <span class="code-str">"Florida Council of the Blind — Jacksonville Chapter"</span>,
+  <span class="code-key">"type"</span>: <span class="code-str">"nonprofit_advocacy"</span>,
+  <span class="code-key">"verified_at"</span>: <span class="code-str">"2026-04-08T14:32:00Z"</span>,
+  <span class="code-key">"verifier"</span>: <span class="code-str">"human_bvi_reviewer"</span>,
+  <span class="code-key">"city"</span>: <span class="code-str">"Jacksonville"</span>,
+  <span class="code-key">"state"</span>: <span class="code-str">"FL"</span>,
+  <span class="code-key">"contact_verified"</span>: <span class="code-bool">true</span>,
+  <span class="code-key">"tags"</span>: <span class="code-arr">["advocacy", "peer-support", "ada-compliance"]</span>
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Pricing ─── -->
+    <section class="section-light section-pad" aria-labelledby="pricing-heading">
+      <div class="section-inner">
+        <p class="section-label">Pricing</p>
+        <h2 class="section-h2" id="pricing-heading">Data Access Tiers</h2>
+        <p class="section-body">Start with a free sample, or get full Jacksonville Hub access with the Core plan. Enterprise options for statewide and national coverage.</p>
+        <div class="pricing-grid" role="list" aria-label="Pricing tiers">
+
+          <!-- Community Pack -->
+          <div class="pricing-card" role="listitem" aria-label="Community Pack pricing tier">
+            <div class="pricing-tier-label">Community Pack</div>
+            <div class="pricing-tier-name">Community Pack</div>
+            <div class="pricing-price">FREE</div>
+            <div class="pricing-desc">Sample data for evaluation</div>
+            <hr class="pricing-divider" />
+            <ul class="pricing-features" aria-label="Community Pack features">
+              <li>25 verified records</li>
+              <li>Jacksonville subset</li>
+              <li>CSV download</li>
+              <li>No API access</li>
+            </ul>
+            <a href="/contact" class="btn-pricing btn-outline">Download Sample</a>
+          </div>
+
+          <!-- Core / Starter -->
+          <div class="pricing-card featured" role="listitem" aria-label="Core pricing tier — most popular">
+            <div class="pricing-tier-label">Most Popular</div>
+            <div class="pricing-tier-name">Core / Starter</div>
+            <div class="pricing-price">$500 <span>/ mo</span></div>
+            <div class="pricing-desc">Full Jacksonville Hub dataset</div>
+            <hr class="pricing-divider" />
+            <ul class="pricing-features" aria-label="Core plan features">
+              <li>350+ verified records</li>
+              <li>Weekly updates</li>
+              <li>REST API access</li>
+              <li>JSON + CSV formats</li>
+              <li>Compliance documentation</li>
+            </ul>
+            <a href="/contact" class="btn-pricing btn-teal">Book Demo &rarr;</a>
+          </div>
+
+          <!-- Enterprise -->
+          <div class="pricing-card" role="listitem" aria-label="Enterprise pricing tier">
+            <div class="pricing-tier-label">Enterprise</div>
+            <div class="pricing-tier-name">Enterprise</div>
+            <div class="pricing-price">Custom</div>
+            <div class="pricing-desc">Statewide or national coverage</div>
+            <hr class="pricing-divider" />
+            <ul class="pricing-features" aria-label="Enterprise plan features">
+              <li>Custom jurisdiction scope</li>
+              <li>Priority verification queue</li>
+              <li>Data Access Agreement</li>
+              <li>Dedicated support</li>
+              <li>White-label option</li>
+            </ul>
+            <a href="/contact" class="btn-pricing btn-dark">Contact Us &rarr;</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Delivery & Integration ─── -->
+    <section class="section-white section-pad" aria-labelledby="delivery-heading">
+      <div class="section-inner">
+        <p class="section-label">Delivery &amp; Integration</p>
+        <h2 class="section-h2" id="delivery-heading">Delivery &amp; Integration</h2>
+        <p class="section-body">Access Eyecosystems data the way your stack works. Three delivery formats, all backed by the same human-verified records.</p>
+        <div class="delivery-grid" role="list" aria-label="Data delivery options">
+          <div class="delivery-card" role="listitem">
+            <div class="delivery-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00f5d0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <div class="delivery-title">REST API</div>
+            <div class="delivery-body">Query verified records by city, state, organization type, or keyword. JSON responses, paginated. Weekly-updated data. API key authentication.</div>
+            <a href="/docs" class="delivery-link">View API Docs &rarr;</a>
+          </div>
+          <div class="delivery-card" role="listitem">
+            <div class="delivery-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00f5d0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+            </div>
+            <div class="delivery-title">Bulk Download</div>
+            <div class="delivery-body">Download the full dataset as CSV or JSON. Delivered weekly or on-demand for Core and Enterprise subscribers. Includes audit trail fields.</div>
+            <a href="/contact" class="delivery-link">Request Download &rarr;</a>
+          </div>
+          <div class="delivery-card" role="listitem">
+            <div class="delivery-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00f5d0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
+            <div class="delivery-title">Direct Integration</div>
+            <div class="delivery-body">Enterprise subscribers can work with our team to integrate Eyecosystems data directly into their platform or compliance tool via webhook or custom pipeline.</div>
+            <a href="/docs" class="delivery-link">Read the Docs &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Compliance Use Case ─── -->
+    <section class="section-light section-pad" aria-labelledby="compliance-heading">
+      <div class="section-inner">
+        <div class="compliance-box">
+          <p class="section-label" style="color: var(--eyeco-teal);">Good Faith Evidence</p>
+          <h2 class="section-h2" id="compliance-heading" style="color: var(--eyeco-white);">Using This Data as Good Faith Evidence</h2>
+          <p class="compliance-body">
+            ADA Title II requires covered entities to demonstrate good faith efforts toward accessibility. Eyecosystems data provides the documented, auditable evidence that entities and their GovTech vendors need to show in transition plans, compliance reports, and DOJ inquiries.
+          </p>
+          <p class="compliance-body" style="margin-top: 16px;">
+            Every record in our knowledge graph includes a verifier ID, timestamp, verification method, and confidence score — creating an unbroken chain of documentation that supports good faith compliance claims. Pair our data with your accessibility audit to produce a complete compliance package.
+          </p>
+          <div class="compliance-tags" aria-label="Compliance use cases">
+            <span class="compliance-tag">ADA Title II</span>
+            <span class="compliance-tag">Transition Plans</span>
+            <span class="compliance-tag">Good Faith Documentation</span>
+            <span class="compliance-tag">DOJ Audit Support</span>
+            <span class="compliance-tag">GovTech Integration</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CTA ─── -->
+    <section class="cta-section" aria-labelledby="cta-heading">
+      <div class="cta-inner">
+        <h2 class="cta-h2" id="cta-heading">See the data in action</h2>
+        <p class="cta-body">Book a 30-minute demo. We'll show you the full Jacksonville Hub dataset, the API, and how it maps to your compliance workflow.</p>
+        <a href="/contact" class="btn-primary">Book a Demo &rarr;</a>
+      </div>
+    </section>
+
+    <!-- ─── Footer ─── -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <div>
+            <a href="/" class="footer-brand-logo" aria-label="Eyecosystems home">
+              <img src="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png" alt="Eyecosystems logo" width="28" height="28" />
+              <span class="footer-brand-name">Eyecosystems</span>
+            </a>
+            <p class="footer-tagline">Human-verified accessibility data for ADA Title II compliance.</p>
+          </div>
+          <div>
+            <div class="footer-col-title">Product</div>
+            <ul class="footer-col-links">
+              <li><a href="/our-data">Our Data</a></li>
+              <li><a href="/docs">Docs</a></li>
+              <li><a href="/book-demo">Book Demo</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-col-title">Company</div>
+            <ul class="footer-col-links">
+              <li><a href="/about">About</a></li>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="/investors">Investors</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-col-title">Legal</div>
+            <ul class="footer-col-links">
+              <li><a href="/privacy">Privacy Policy</a></li>
+              <li><a href="/terms">Terms of Service</a></li>
+              <li><a href="/accessibility">Accessibility</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span class="footer-copy">&copy; 2026 Eyecosystems. All rights reserved. Jacksonville, FL.</span>
+          <nav class="footer-bottom-links" aria-label="Footer legal links">
+            <a href="/privacy">Privacy</a>
+            <a href="/terms">Terms</a>
+            <a href="/contact">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.querySelectorAll('.nav-dropdown').forEach(function(el){
+        var btn=el.querySelector('.nav-dropdown-btn');
+        btn.addEventListener('click',function(e){e.stopPropagation();var o=el.classList.toggle('is-open');btn.setAttribute('aria-expanded',o);});
+      });
+      document.addEventListener('click',function(){
+        document.querySelectorAll('.nav-dropdown').forEach(function(el){el.classList.remove('is-open');var b=el.querySelector('.nav-dropdown-btn');if(b)b.setAttribute('aria-expanded','false');});
+      });
+    </script>
+
+  </body>
+</html>

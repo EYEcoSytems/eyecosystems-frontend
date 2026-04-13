@@ -163,23 +163,26 @@
       :focus-visible { outline: 2px solid #01a39e; outline-offset: 2px; border-radius: 4px; }
 
       /* ─── Header ─── */
-      .blog-header {
-        position: sticky; top: 0; z-index: 100;
-        background: var(--eyeco-black); height: 64px;
-        display: flex; align-items: center;
-        border-bottom: 1px solid #1a1a1a;
-      }
-      .blog-header-inner {
-        width: 80%; max-width: 1280px; margin: 0 auto;
-        display: flex; align-items: center; justify-content: space-between;
-      }
+      .blog-header { position: sticky; top: 0; z-index: 100; background: #000; height: 64px; display: flex; align-items: center; border-bottom: 1px solid #1a1a1a; }
+      .blog-header-inner { width: 80%; max-width: 1280px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
       .blog-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
       .blog-logo img { height: 32px; width: auto; }
-      .blog-logo-name { color: var(--eyeco-white); font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 0.02em; }
+      .blog-logo-name { color: #fff; font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 0.02em; }
       .blog-nav { display: flex; align-items: center; gap: 28px; }
-      .blog-nav a { color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; text-decoration: none; transition: color 0.15s; }
-      .blog-nav a:hover { color: var(--eyeco-white); }
-      .blog-nav a.active { color: var(--eyeco-teal); }
+      .blog-nav > a { color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; text-decoration: none; transition: color 0.15s; }
+      .blog-nav > a:hover { color: #fff; }
+      .blog-nav > a.active { color: #00f5d0; }
+      /* Dropdown */
+      .nav-dropdown { position: relative; display: flex; align-items: center; }
+      .nav-dropdown-btn { background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 5px; color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; padding: 0; transition: color 0.15s; }
+      .nav-dropdown-btn:hover, .nav-dropdown.is-open .nav-dropdown-btn { color: #fff; }
+      .nav-dropdown-icon { transition: transform 0.2s; }
+      .nav-dropdown.is-open .nav-dropdown-icon { transform: rotate(180deg); }
+      .nav-dropdown-menu { display: none; position: absolute; top: calc(100% + 16px); right: -8px; background: #111; border: 1px solid #2a2a2a; border-radius: 8px; padding: 6px; min-width: 190px; z-index: 200; box-shadow: 0 8px 24px rgba(0,0,0,0.5); }
+      .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+      .nav-dropdown-menu a { display: block; padding: 9px 14px; color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; text-decoration: none; border-radius: 5px; transition: background 0.1s, color 0.1s; }
+      .nav-dropdown-menu a:hover { background: #1e1e1e; color: #fff; }
+      .nav-dropdown-menu a.active { color: #00f5d0; }
 
       /* ─── Post layout ─── */
       .post-page { background: var(--eyeco-bg); padding-bottom: 80px; }
@@ -235,29 +238,27 @@
       .post-stat-box-text { font-family: 'DM Sans', sans-serif; font-size: 15px; color: #ccc; line-height: 1.6; }
       .post-stat-box-text strong { color: var(--eyeco-white); }
 
-      /* FAQ section */
+      /* FAQ accordion */
       .post-faq { margin: 44px 0 0; }
-      .post-faq-title { font-family: 'DM Sans', sans-serif; font-size: 24px; font-weight: 700; color: var(--eyeco-black); margin-bottom: 24px; }
-      .faq-item { border-top: 1px solid var(--eyeco-border); padding: 20px 0; }
-      .faq-item:last-child { border-bottom: 1px solid var(--eyeco-border); }
-      .faq-q { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 700; color: var(--eyeco-dark-blue); margin-bottom: 10px; }
-      .faq-a { font-family: 'DM Sans', sans-serif; font-size: 15px; color: #444; line-height: 1.7; }
+      .post-faq-title { font-family: 'DM Sans', sans-serif; font-size: 24px; font-weight: 700; color: #000; margin-bottom: 6px; }
+      .post-faq-sub { font-family: 'DM Sans', sans-serif; font-size: 14px; color: #888; margin-bottom: 24px; }
+      .faq-item { background: #0d1f35; border-radius: 8px; margin-bottom: 8px; overflow: hidden; }
+      .faq-trigger { width: 100%; background: none; border: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; padding: 18px 22px; gap: 16px; text-align: left; }
+      .faq-trigger:hover { background: rgba(255,255,255,0.03); }
+      .faq-q { font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600; color: #00f5d0; line-height: 1.4; }
+      .faq-icon { flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid #444; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 16px; font-weight: 300; line-height: 1; transition: transform 0.2s, border-color 0.2s; }
+      .faq-item.is-open .faq-icon { transform: rotate(45deg); border-color: #00f5d0; color: #00f5d0; }
+      .faq-body { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+      .faq-item.is-open .faq-body { max-height: 300px; }
+      .faq-a { font-family: 'DM Sans', sans-serif; font-size: 14px; color: #a0b8cc; line-height: 1.75; padding: 0 22px 20px; }
 
       /* CTA box */
-      .post-cta-box {
-        background: var(--eyeco-dark-blue); border-radius: 10px;
-        padding: 36px 40px; margin: 48px 0; text-align: center;
-      }
-      .post-cta-box-label { font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--eyeco-teal); margin-bottom: 12px; }
-      .post-cta-box-title { font-family: 'DM Sans', sans-serif; font-size: 22px; font-weight: 800; color: var(--eyeco-white); margin-bottom: 10px; line-height: 1.3; }
+      .post-cta-box { background: #27455c; border-radius: 10px; padding: 36px 40px; margin: 48px 0; text-align: center; }
+      .post-cta-box-label { font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #00f5d0; margin-bottom: 12px; }
+      .post-cta-box-title { font-family: 'DM Sans', sans-serif; font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 10px; line-height: 1.3; }
       .post-cta-box-sub { font-family: 'DM Sans', sans-serif; font-size: 14px; color: #a0b4c4; margin-bottom: 24px; line-height: 1.6; }
-      .btn-cta-primary {
-        display: inline-block; background: var(--eyeco-data-teal); color: var(--eyeco-white);
-        font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 700;
-        padding: 13px 28px; border-radius: 6px; text-decoration: none;
-        transition: background 0.15s, transform 0.1s;
-      }
-      .btn-cta-primary:hover { background: #018a84; transform: translateY(-1px); color: var(--eyeco-white); }
+      .btn-cta-primary { display: inline-block; background: #01a39e; color: #fff !important; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 700; padding: 13px 28px; border-radius: 6px; text-decoration: none; transition: background 0.15s, transform 0.1s; }
+      .btn-cta-primary:hover { background: #018a84; transform: translateY(-1px); }
 
       /* Tags */
       .post-tags-section { margin-top: 48px; padding-top: 28px; border-top: 1px solid var(--eyeco-border); }
@@ -302,11 +303,19 @@
         <nav class="blog-nav" role="navigation" aria-label="Main navigation">
           <a href="/">Home</a>
           <a href="/our-data">Our Data</a>
-          <a href="/about">About</a>
+          <div class="nav-dropdown" id="about-dropdown">
+            <button class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false" aria-controls="about-menu">
+              About
+              <svg class="nav-dropdown-icon" width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M2 3.5l3.5 3.5 3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="nav-dropdown-menu" id="about-menu" role="menu">
+              <a href="/about" role="menuitem">About Eyecosystems</a>
+              <a href="/blog" role="menuitem" class="active">Blog</a>
+            </div>
+          </div>
           <a href="/docs">Docs</a>
           <a href="/investors">Investors</a>
           <a href="/contact">Contact</a>
-          <a href="/blog" class="active" aria-current="true">Blog</a>
         </nav>
       </div>
     </header>
@@ -511,28 +520,54 @@
             <a href="/book-demo" class="btn-cta-primary">Book a 20-Min Demo &rarr;</a>
           </div>
 
-          <h2>Frequently Asked Questions</h2>
-
           <div class="post-faq" aria-label="Frequently asked questions">
+            <h2 class="post-faq-title">Frequently Asked Questions</h2>
+            <p class="post-faq-sub">Everything you need to know about ADA Title II compliance and how Eyecosystems helps.</p>
+
             <div class="faq-item">
-              <p class="faq-q">What is the ADA Title II compliance deadline in 2026?</p>
-              <p class="faq-a">The ADA Title II digital accessibility compliance deadline for most state and local government entities is <strong>April 24, 2026</strong>. Under the 2024 DOJ rule update, covered entities must ensure their websites and mobile apps conform to WCAG 2.1 Level AA by this date. Entities serving populations under 50,000 have until April 26, 2027.</p>
+              <button class="faq-trigger" aria-expanded="false">
+                <span class="faq-q">What is the ADA Title II compliance deadline in 2026?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-body">
+                <p class="faq-a">The ADA Title II digital accessibility compliance deadline for most state and local government entities is <strong style="color:#fff">April 24, 2026</strong>. Under the 2024 DOJ rule update, covered entities must ensure their websites and mobile apps conform to WCAG 2.1 Level AA by this date. Entities serving populations under 50,000 have until April 26, 2027.</p>
+              </div>
             </div>
             <div class="faq-item">
-              <p class="faq-q">Who does ADA Title II digital accessibility apply to?</p>
-              <p class="faq-a">ADA Title II applies to all state and local government entities — municipalities, counties, school districts, public hospitals, and transit authorities — and the GovTech vendors and third-party platforms they use to deliver public-facing services.</p>
+              <button class="faq-trigger" aria-expanded="false">
+                <span class="faq-q">Who does ADA Title II digital accessibility apply to?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-body">
+                <p class="faq-a">ADA Title II applies to all state and local government entities — municipalities, counties, school districts, public hospitals, and transit authorities — and the GovTech vendors and third-party platforms they use to deliver public-facing services.</p>
+              </div>
             </div>
             <div class="faq-item">
-              <p class="faq-q">What counts as a good faith effort for ADA Title II compliance?</p>
-              <p class="faq-a">A good faith effort includes documented WCAG audits, a written remediation timeline, active community outreach to blind and low-vision populations, human-verified accessibility data, and a published feedback mechanism. Structured community data from Eyecosystems can serve as documented evidence of outreach.</p>
+              <button class="faq-trigger" aria-expanded="false">
+                <span class="faq-q">What counts as a good faith effort for ADA Title II compliance?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-body">
+                <p class="faq-a">A good faith effort includes documented WCAG audits, a written remediation timeline, active community outreach to blind and low-vision populations, human-verified accessibility data, and a published feedback mechanism. Structured community data from Eyecosystems can serve as documented evidence of outreach.</p>
+              </div>
             </div>
             <div class="faq-item">
-              <p class="faq-q">What are the penalties for ADA Title II non-compliance?</p>
-              <p class="faq-a">Non-compliance can result in DOJ enforcement actions, civil rights complaints, and significant reputational risk. GovTech vendors whose platforms are used by non-compliant governments may face contract termination or exclusion from future procurement.</p>
+              <button class="faq-trigger" aria-expanded="false">
+                <span class="faq-q">What are the penalties for ADA Title II non-compliance?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-body">
+                <p class="faq-a">Non-compliance can result in DOJ enforcement actions, civil rights complaints, and significant reputational risk. GovTech vendors whose platforms are used by non-compliant governments may face contract termination or exclusion from future procurement.</p>
+              </div>
             </div>
             <div class="faq-item">
-              <p class="faq-q">Does ADA Title II apply to GovTech vendors?</p>
-              <p class="faq-a">Yes. If your platform is used by a covered government entity to deliver public-facing services, your product must meet ADA Title II digital accessibility requirements. Governments cannot outsource their compliance obligation.</p>
+              <button class="faq-trigger" aria-expanded="false">
+                <span class="faq-q">Does ADA Title II apply to GovTech vendors?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-body">
+                <p class="faq-a">Yes. If your platform is used by a covered government entity to deliver public-facing services, your product must meet ADA Title II digital accessibility requirements. Governments cannot outsource their compliance obligation.</p>
+              </div>
             </div>
           </div>
 
@@ -577,5 +612,31 @@
       </div>
     </footer>
 
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-trigger').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = btn.closest('.faq-item');
+        var isOpen = item.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', isOpen);
+      });
+    });
+    // Nav dropdown
+    document.querySelectorAll('.nav-dropdown').forEach(function(el) {
+      var btn = el.querySelector('.nav-dropdown-btn');
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var o = el.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', o);
+      });
+    });
+    document.addEventListener('click', function() {
+      document.querySelectorAll('.nav-dropdown').forEach(function(el) {
+        el.classList.remove('is-open');
+        var b = el.querySelector('.nav-dropdown-btn');
+        if (b) b.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
   </body>
 </html>

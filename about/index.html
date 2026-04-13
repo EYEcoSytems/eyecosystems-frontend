@@ -1,0 +1,812 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#000000" />
+
+    <title>About Eyecosystems — Human-Verified Accessibility Data</title>
+    <meta name="description" content="Eyecosystems builds structured, human-verified blind and low-vision community data for ADA Title II compliance. Learn our mission, origin story, and the CLEAR verification method." />
+
+    <link rel="canonical" href="https://eyecosystems.com/about" />
+    <link rel="icon" type="image/png" href="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png" />
+    <link rel="apple-touch-icon" href="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Eyecosystems" />
+    <meta property="og:url" content="https://eyecosystems.com/about" />
+    <meta property="og:title" content="About Eyecosystems — Human-Verified Accessibility Data" />
+    <meta property="og:description" content="Eyecosystems builds structured, human-verified blind and low-vision community data for ADA Title II compliance." />
+    <meta property="og:image" content="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@eyecosystems" />
+    <meta name="twitter:title" content="About Eyecosystems — Human-Verified Accessibility Data" />
+    <meta name="twitter:description" content="Eyecosystems builds structured, human-verified blind and low-vision community data for ADA Title II compliance." />
+
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-940W81LPR1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-940W81LPR1');
+    </script>
+
+    <style>
+      /* ─── Reset & tokens ─── */
+      *, *::before, *::after { box-sizing: border-box; border: 0 solid #e5e7eb; }
+      html { -webkit-text-size-adjust: 100%; font-family: 'DM Sans', Helvetica Neue, Helvetica, Arial, sans-serif; line-height: 1.5; }
+      body { margin: 0; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; background: #f4f6f8; color: #111; }
+      h1,h2,h3,h4,h5,h6,p,ul,ol { margin: 0; padding: 0; }
+      a { color: inherit; text-decoration: inherit; }
+      img, svg { display: block; max-width: 100%; height: auto; }
+      :root {
+        --eyeco-black: #000;
+        --eyeco-dark-blue: #27455c;
+        --eyeco-teal: #00f5d0;
+        --eyeco-data-teal: #01a39e;
+        --eyeco-white: #fff;
+        --eyeco-slate: #999;
+        --eyeco-bg: #f4f6f8;
+        --eyeco-border: #dde3ea;
+      }
+      :focus-visible { outline: 2px solid #01a39e; outline-offset: 2px; border-radius: 4px; }
+
+      /* ─── Header ─── */
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: var(--eyeco-black);
+        height: 64px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #1a1a1a;
+      }
+      .header-inner {
+        width: 80%;
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .header-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+      }
+      .header-logo img { height: 32px; width: auto; }
+      .header-logo-name {
+        color: var(--eyeco-white);
+        font-family: 'DM Sans', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+      .header-nav {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+      }
+      .header-nav a {
+        color: #ccc;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: color 0.15s;
+      }
+      .header-nav a:hover { color: var(--eyeco-white); }
+      .header-nav a.active { color: var(--eyeco-teal); }
+
+      /* Dropdown */
+      .nav-dropdown { position: relative; }
+      .nav-dropdown-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--eyeco-teal);
+        font-family: 'DM Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        transition: color 0.15s;
+      }
+      .nav-dropdown-btn:hover { color: #fff; }
+      .nav-dropdown-btn svg { transition: transform 0.2s; }
+      .nav-dropdown.is-open .nav-dropdown-btn svg { transform: rotate(180deg); }
+      .nav-dropdown-menu {
+        display: none;
+        position: absolute;
+        top: calc(100% + 12px);
+        left: 50%;
+        transform: translateX(-50%);
+        background: #111;
+        border: 1px solid #2a2a2a;
+        border-radius: 8px;
+        min-width: 200px;
+        padding: 6px 0;
+        z-index: 200;
+      }
+      .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+      .nav-dropdown-menu a {
+        display: block;
+        padding: 10px 18px;
+        color: #ccc;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: color 0.15s, background 0.15s;
+      }
+      .nav-dropdown-menu a:hover { color: #fff; background: #1a1a1a; }
+      .nav-dropdown-menu a.active { color: var(--eyeco-teal); }
+
+      @media (max-width: 768px) {
+        .header-inner { width: 92%; }
+        .header-nav { display: none; }
+      }
+
+      /* ─── Page hero ─── */
+      .page-hero {
+        background: var(--eyeco-black);
+        padding: 72px 0 60px;
+        border-bottom: 1px solid #1a1a1a;
+      }
+      .page-hero-inner {
+        width: 80%;
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+      .page-label {
+        font-family: 'Space Mono', monospace;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--eyeco-teal);
+        margin-bottom: 16px;
+      }
+      .page-h1 {
+        font-family: 'DM Sans', sans-serif;
+        font-size: clamp(32px, 5vw, 52px);
+        font-weight: 800;
+        color: var(--eyeco-white);
+        line-height: 1.1;
+        margin-bottom: 20px;
+        max-width: 780px;
+      }
+      .page-subtitle {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        color: var(--eyeco-slate);
+        max-width: 600px;
+        line-height: 1.6;
+      }
+
+      /* ─── Section utilities ─── */
+      .section-white { background: var(--eyeco-white); }
+      .section-light { background: var(--eyeco-bg); }
+      .section-dark-blue { background: var(--eyeco-dark-blue); }
+
+      .section-inner {
+        width: 80%;
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+      .section-pad { padding: 72px 0; }
+
+      .section-label {
+        font-family: 'Space Mono', monospace;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--eyeco-data-teal);
+        margin-bottom: 12px;
+      }
+      .section-h2 {
+        font-family: 'DM Sans', sans-serif;
+        font-size: clamp(26px, 4vw, 38px);
+        font-weight: 800;
+        color: var(--eyeco-black);
+        line-height: 1.15;
+        margin-bottom: 20px;
+      }
+      .section-body {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        color: #444;
+        line-height: 1.75;
+        max-width: 680px;
+      }
+
+      /* ─── Mission stat grid ─── */
+      .stat-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-top: 48px;
+      }
+      .stat-card {
+        background: var(--eyeco-black);
+        border: 1px solid #1a1a1a;
+        border-radius: 12px;
+        padding: 32px 28px;
+        text-align: center;
+      }
+      .stat-number {
+        font-family: 'Space Mono', monospace;
+        font-size: clamp(28px, 4vw, 40px);
+        font-weight: 700;
+        color: var(--eyeco-teal);
+        line-height: 1;
+        margin-bottom: 10px;
+      }
+      .stat-label {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--eyeco-slate);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+
+      /* ─── CLEAR steps ─── */
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        margin-top: 40px;
+      }
+      .step-card {
+        background: var(--eyeco-white);
+        border: 1px solid var(--eyeco-border);
+        border-radius: 12px;
+        padding: 28px 28px 28px 24px;
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+      }
+      .step-number {
+        font-family: 'Space Mono', monospace;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--eyeco-black);
+        background: var(--eyeco-teal);
+        border-radius: 8px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .step-content {}
+      .step-title {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 17px;
+        font-weight: 700;
+        color: var(--eyeco-black);
+        margin-bottom: 6px;
+      }
+      .step-desc {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        color: #555;
+        line-height: 1.65;
+      }
+
+      /* ─── Values cards ─── */
+      .values-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-top: 40px;
+      }
+      .value-card {
+        background: var(--eyeco-white);
+        border: 1px solid var(--eyeco-border);
+        border-radius: 12px;
+        padding: 32px 28px;
+      }
+      .value-icon {
+        width: 44px;
+        height: 44px;
+        background: #e6f7f6;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 16px;
+      }
+      .value-title {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--eyeco-black);
+        margin-bottom: 10px;
+      }
+      .value-body {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        color: #555;
+        line-height: 1.65;
+      }
+
+      /* ─── CTA section ─── */
+      .cta-section {
+        background: var(--eyeco-dark-blue);
+        padding: 80px 0;
+      }
+      .cta-inner {
+        width: 80%;
+        max-width: 1280px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .cta-h2 {
+        font-family: 'DM Sans', sans-serif;
+        font-size: clamp(28px, 4vw, 40px);
+        font-weight: 800;
+        color: var(--eyeco-white);
+        margin-bottom: 16px;
+      }
+      .cta-body {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 17px;
+        font-weight: 400;
+        color: rgba(255,255,255,0.7);
+        max-width: 560px;
+        margin: 0 auto 32px;
+        line-height: 1.65;
+      }
+      .btn-primary {
+        display: inline-block;
+        background: var(--eyeco-teal);
+        color: var(--eyeco-black);
+        font-family: 'DM Sans', sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        padding: 14px 32px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: opacity 0.15s, transform 0.1s;
+      }
+      .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+      .btn-primary:active { transform: translateY(0); }
+
+      /* ─── Footer ─── */
+      .site-footer {
+        background: var(--eyeco-black);
+        border-top: 1px solid #1a1a1a;
+        padding: 64px 0 0;
+      }
+      .footer-inner {
+        width: 80%;
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 48px;
+        padding-bottom: 48px;
+        border-bottom: 1px solid #1a1a1a;
+      }
+      .footer-brand-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 16px;
+        text-decoration: none;
+      }
+      .footer-brand-logo img { height: 28px; width: auto; }
+      .footer-brand-name {
+        color: var(--eyeco-white);
+        font-family: 'DM Sans', sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+      }
+      .footer-tagline {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 13px;
+        color: var(--eyeco-slate);
+        line-height: 1.65;
+        max-width: 260px;
+      }
+      .footer-col-title {
+        font-family: 'Space Mono', monospace;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--eyeco-white);
+        margin-bottom: 16px;
+      }
+      .footer-col-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        list-style: none;
+      }
+      .footer-col-links a {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 14px;
+        color: var(--eyeco-slate);
+        text-decoration: none;
+        transition: color 0.15s;
+      }
+      .footer-col-links a:hover { color: var(--eyeco-white); }
+      .footer-bottom {
+        padding: 24px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .footer-copy {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 13px;
+        color: var(--eyeco-slate);
+      }
+      .footer-bottom-links {
+        display: flex;
+        gap: 20px;
+      }
+      .footer-bottom-links a {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 13px;
+        color: var(--eyeco-slate);
+        text-decoration: none;
+        transition: color 0.15s;
+      }
+      .footer-bottom-links a:hover { color: var(--eyeco-white); }
+
+      /* ─── Origin section two-col ─── */
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+        align-items: start;
+      }
+      .origin-detail {
+        background: var(--eyeco-bg);
+        border: 1px solid var(--eyeco-border);
+        border-radius: 12px;
+        padding: 28px;
+        margin-top: 24px;
+      }
+      .origin-detail-title {
+        font-family: 'Space Mono', monospace;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--eyeco-data-teal);
+        margin-bottom: 10px;
+      }
+      .origin-detail-body {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        color: #444;
+        line-height: 1.7;
+      }
+
+      /* ─── Responsive ─── */
+      @media (max-width: 900px) {
+        .stat-grid { grid-template-columns: repeat(3, 1fr); }
+        .steps-grid { grid-template-columns: 1fr; }
+        .values-grid { grid-template-columns: 1fr 1fr; }
+        .two-col { grid-template-columns: 1fr; gap: 32px; }
+        .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      }
+      @media (max-width: 768px) {
+        .section-inner { width: 92%; }
+        .page-hero-inner { width: 92%; }
+        .cta-inner { width: 92%; }
+        .footer-inner { width: 92%; }
+        .stat-grid { grid-template-columns: 1fr; }
+        .values-grid { grid-template-columns: 1fr; }
+        .footer-grid { grid-template-columns: 1fr; }
+        .footer-bottom { flex-direction: column; align-items: flex-start; }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <!-- ─── Header ─── -->
+    <header class="site-header" role="banner">
+      <div class="header-inner">
+        <a href="/" class="header-logo" aria-label="Eyecosystems home">
+          <img
+            src="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png"
+            alt="Eyecosystems logo"
+            width="32" height="32"
+          />
+          <span class="header-logo-name">Eyecosystems</span>
+        </a>
+        <nav class="header-nav" role="navigation" aria-label="Main navigation">
+          <a href="/">Home</a>
+          <a href="/our-data">Our Data</a>
+          <div class="nav-dropdown" role="none">
+            <button
+              class="nav-dropdown-btn"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-label="About menu"
+            >
+              About
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="nav-dropdown-menu" role="menu">
+              <a href="/about" role="menuitem" class="active" aria-current="page">About Eyecosystems</a>
+              <a href="/blog" role="menuitem">Blog</a>
+            </div>
+          </div>
+          <a href="/docs">Docs</a>
+          <a href="/investors">Investors</a>
+          <a href="/contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ─── Page Hero ─── -->
+    <section class="page-hero" aria-label="About page header">
+      <div class="page-hero-inner">
+        <p class="page-label">OUR STORY</p>
+        <h1 class="page-h1">Human-Verified Accessibility Data — Built From the Community Up</h1>
+        <p class="page-subtitle">Eyecosystems is the data layer ADA Title II compliance tools don't have.</p>
+      </div>
+    </section>
+
+    <!-- ─── Mission ─── -->
+    <section class="section-white section-pad" aria-labelledby="mission-heading">
+      <div class="section-inner">
+        <p class="section-label">Our Mission</p>
+        <h2 class="section-h2" id="mission-heading">Closing the Gap Between Mandate and Community</h2>
+        <p class="section-body">
+          We exist to close the gap between ADA compliance mandates and the blind and low-vision communities those mandates are meant to serve. Structured, verified data isn't just a product — it's evidence of good faith.
+        </p>
+        <p class="section-body" style="margin-top:16px;">
+          Every compliance tool built for government serves a community. Eyecosystems gives those tools the data layer they're missing: a live, human-verified knowledge graph of BVI organizations, services, and resources — starting in Jacksonville and expanding nationally.
+        </p>
+        <div class="stat-grid" aria-label="Key statistics">
+          <div class="stat-card">
+            <div class="stat-number">350+</div>
+            <div class="stat-label">Verified Records</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">10K+</div>
+            <div class="stat-label">In Verification</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">125K+</div>
+            <div class="stat-label">Entities Mapped</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Origin ─── -->
+    <section class="section-light section-pad" aria-labelledby="origin-heading">
+      <div class="section-inner">
+        <div class="two-col">
+          <div>
+            <p class="section-label">Jacksonville, FL</p>
+            <h2 class="section-h2" id="origin-heading">Built on the Ground in Jacksonville</h2>
+            <p class="section-body">
+              Eyecosystems was founded in partnership with the Eye Spy Foundation, a Jacksonville-based nonprofit serving the blind and low-vision community. That partnership isn't incidental — it's structural.
+            </p>
+            <p class="section-body" style="margin-top: 16px;">
+              The Jacksonville Hub is our first deployment: a concentrated geographic scope where we can demonstrate what high-fidelity BVI community data looks like in practice. Every week, trained members of the BVI community physically verify records — checking that organizations still exist, services are still offered, and contact information is accurate.
+            </p>
+            <p class="section-body" style="margin-top: 16px;">
+              This isn't scraped data. It isn't AI-inferred. It's community knowledge, structured and delivered in a format GovTech vendors can actually use.
+            </p>
+          </div>
+          <div>
+            <div class="origin-detail">
+              <div class="origin-detail-title">Eye Spy Foundation</div>
+              <div class="origin-detail-body">A Jacksonville-based nonprofit serving blind and low-vision individuals. Eyecosystems is the data infrastructure arm that puts community knowledge into structured, machine-readable form.</div>
+            </div>
+            <div class="origin-detail">
+              <div class="origin-detail-title">Jacksonville Hub</div>
+              <div class="origin-detail-body">The first Eyecosystems deployment geography. A dense, high-coverage dataset of BVI organizations, events, and service providers in Jacksonville, FL — verified weekly.</div>
+            </div>
+            <div class="origin-detail">
+              <div class="origin-detail-title">Human Verifiers</div>
+              <div class="origin-detail-body">Trained BVI community members who physically verify each record on a weekly schedule. Human verification is the core differentiator — not a feature, but the foundation of everything we do.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CLEAR Verification ─── -->
+    <section class="section-white section-pad" aria-labelledby="clear-heading">
+      <div class="section-inner">
+        <p class="section-label">Verification Process</p>
+        <h2 class="section-h2" id="clear-heading">The CLEAR Verification Method</h2>
+        <p class="section-body">
+          Every record in the Eyecosystems knowledge graph passes through our five-step CLEAR process — designed by and for the BVI community to ensure maximum accuracy and trustworthiness.
+        </p>
+        <div class="steps-grid" role="list" aria-label="CLEAR verification steps">
+          <div class="step-card" role="listitem">
+            <div class="step-number" aria-hidden="true">01</div>
+            <div class="step-content">
+              <div class="step-title">Collect</div>
+              <div class="step-desc">Source data is gathered from public directories, community referrals, government databases, and direct outreach. Multiple sources are cross-referenced before a record enters the verification pipeline.</div>
+            </div>
+          </div>
+          <div class="step-card" role="listitem">
+            <div class="step-number" aria-hidden="true">02</div>
+            <div class="step-content">
+              <div class="step-title">Locate</div>
+              <div class="step-desc">A trained BVI community verifier is assigned to each record. They confirm the physical or virtual location of the organization, service, or resource through direct contact or in-person verification.</div>
+            </div>
+          </div>
+          <div class="step-card" role="listitem">
+            <div class="step-number" aria-hidden="true">03</div>
+            <div class="step-content">
+              <div class="step-title">Evaluate</div>
+              <div class="step-desc">The verifier assesses the organization's current status, services offered, and accessibility. Records that no longer meet our criteria are flagged for removal or reclassification.</div>
+            </div>
+          </div>
+          <div class="step-card" role="listitem">
+            <div class="step-number" aria-hidden="true">04</div>
+            <div class="step-content">
+              <div class="step-title">Authenticate</div>
+              <div class="step-desc">Contact information, operating hours, and service details are authenticated directly with the organization. Verifier identity and method are logged against each record.</div>
+            </div>
+          </div>
+          <div class="step-card" role="listitem">
+            <div class="step-number" aria-hidden="true">05</div>
+            <div class="step-content">
+              <div class="step-title">Record</div>
+              <div class="step-desc">The verified record is written to the Eyecosystems knowledge graph with a full audit trail: verifier ID, timestamp, method, and confidence score. It enters the weekly re-verification cycle.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Values ─── -->
+    <section class="section-light section-pad" aria-labelledby="values-heading">
+      <div class="section-inner">
+        <p class="section-label">Our Values</p>
+        <h2 class="section-h2" id="values-heading">What We Believe</h2>
+        <div class="values-grid" role="list" aria-label="Company values">
+          <div class="value-card" role="listitem">
+            <div class="value-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#01a39e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <div class="value-title">Community First</div>
+            <div class="value-body">The BVI community is not a data source. They are partners, verifiers, and the primary beneficiaries of everything we build. Every decision we make starts with whether it serves them.</div>
+          </div>
+          <div class="value-card" role="listitem">
+            <div class="value-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#01a39e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 11 12 14 22 4"/>
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+              </svg>
+            </div>
+            <div class="value-title">Evidence Over Assertion</div>
+            <div class="value-body">Compliance without evidence is just paperwork. Every record we produce carries a complete audit trail — verifier, method, timestamp, confidence. We don't claim compliance. We document it.</div>
+          </div>
+          <div class="value-card" role="listitem">
+            <div class="value-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#01a39e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="8" x2="12" y2="12"/>
+                <line x1="12" y1="16" x2="12.01" y2="16"/>
+              </svg>
+            </div>
+            <div class="value-title">Human Over Automated</div>
+            <div class="value-body">Automated accessibility tools miss the community. We deliberately build around human verification because the data we produce must be trusted in legal and compliance contexts where automation is not enough.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CTA ─── -->
+    <section class="cta-section" aria-labelledby="cta-heading">
+      <div class="cta-inner">
+        <h2 class="cta-h2" id="cta-heading">Ready to see the data?</h2>
+        <p class="cta-body">Our structured BVI community data is available via API and bulk download. Scope your jurisdiction.</p>
+        <a href="/our-data" class="btn-primary">Explore Our Data &rarr;</a>
+      </div>
+    </section>
+
+    <!-- ─── Footer ─── -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <!-- Brand -->
+          <div>
+            <a href="/" class="footer-brand-logo" aria-label="Eyecosystems home">
+              <img src="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png" alt="Eyecosystems logo" width="28" height="28" />
+              <span class="footer-brand-name">Eyecosystems</span>
+            </a>
+            <p class="footer-tagline">Human-verified accessibility data for ADA Title II compliance.</p>
+          </div>
+          <!-- Product -->
+          <div>
+            <div class="footer-col-title">Product</div>
+            <ul class="footer-col-links">
+              <li><a href="/our-data">Our Data</a></li>
+              <li><a href="/docs">Docs</a></li>
+              <li><a href="/book-demo">Book Demo</a></li>
+            </ul>
+          </div>
+          <!-- Company -->
+          <div>
+            <div class="footer-col-title">Company</div>
+            <ul class="footer-col-links">
+              <li><a href="/about">About</a></li>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="/investors">Investors</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+          <!-- Legal -->
+          <div>
+            <div class="footer-col-title">Legal</div>
+            <ul class="footer-col-links">
+              <li><a href="/privacy">Privacy Policy</a></li>
+              <li><a href="/terms">Terms of Service</a></li>
+              <li><a href="/accessibility">Accessibility</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span class="footer-copy">&copy; 2026 Eyecosystems. All rights reserved. Jacksonville, FL.</span>
+          <nav class="footer-bottom-links" aria-label="Footer legal links">
+            <a href="/privacy">Privacy</a>
+            <a href="/terms">Terms</a>
+            <a href="/contact">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.querySelectorAll('.nav-dropdown').forEach(function(el){
+        var btn=el.querySelector('.nav-dropdown-btn');
+        btn.addEventListener('click',function(e){e.stopPropagation();var o=el.classList.toggle('is-open');btn.setAttribute('aria-expanded',o);});
+      });
+      document.addEventListener('click',function(){
+        document.querySelectorAll('.nav-dropdown').forEach(function(el){el.classList.remove('is-open');var b=el.querySelector('.nav-dropdown-btn');if(b)b.setAttribute('aria-expanded','false');});
+      });
+    </script>
+
+  </body>
+</html>

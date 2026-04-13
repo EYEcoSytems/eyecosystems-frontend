@@ -96,7 +96,7 @@
         align-items: center;
         gap: 28px;
       }
-      .blog-nav a {
+      .blog-nav > a {
         color: #ccc;
         font-family: 'DM Sans', sans-serif;
         font-size: 14px;
@@ -104,12 +104,18 @@
         text-decoration: none;
         transition: color 0.15s;
       }
-      .blog-nav a:hover {
-        color: var(--eyeco-white);
-      }
-      .blog-nav a.active {
-        color: var(--eyeco-teal);
-      }
+      .blog-nav > a:hover { color: #fff; }
+      .blog-nav > a.active { color: #00f5d0; }
+      .nav-dropdown { position: relative; display: flex; align-items: center; }
+      .nav-dropdown-btn { background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 5px; color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; padding: 0; transition: color 0.15s; }
+      .nav-dropdown-btn:hover, .nav-dropdown.is-open .nav-dropdown-btn { color: #fff; }
+      .nav-dropdown-icon { transition: transform 0.2s; }
+      .nav-dropdown.is-open .nav-dropdown-icon { transform: rotate(180deg); }
+      .nav-dropdown-menu { display: none; position: absolute; top: calc(100% + 16px); right: -8px; background: #111; border: 1px solid #2a2a2a; border-radius: 8px; padding: 6px; min-width: 190px; z-index: 200; box-shadow: 0 8px 24px rgba(0,0,0,0.5); }
+      .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+      .nav-dropdown-menu a { display: block; padding: 9px 14px; color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; text-decoration: none; border-radius: 5px; transition: background 0.1s, color 0.1s; }
+      .nav-dropdown-menu a:hover { background: #1e1e1e; color: #fff; }
+      .nav-dropdown-menu a.active { color: #00f5d0; }
 
       /* Page hero */
       .blog-page-hero {
@@ -389,14 +395,22 @@
           />
           <span class="blog-logo-name">Eyecosystems</span>
         </a>
-        <nav class="blog-nav desktop-nav" role="navigation" aria-label="Main navigation">
+        <nav class="blog-nav" role="navigation" aria-label="Main navigation">
           <a href="/">Home</a>
           <a href="/our-data">Our Data</a>
-          <a href="/about">About</a>
+          <div class="nav-dropdown" id="about-dropdown">
+            <button class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false" aria-controls="about-menu">
+              About
+              <svg class="nav-dropdown-icon" width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M2 3.5l3.5 3.5 3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="nav-dropdown-menu" id="about-menu" role="menu">
+              <a href="/about" role="menuitem">About Eyecosystems</a>
+              <a href="/blog" role="menuitem" class="active">Blog</a>
+            </div>
+          </div>
           <a href="/docs">Docs</a>
           <a href="/investors">Investors</a>
           <a href="/contact">Contact</a>
-          <a href="/blog" class="active" aria-current="page">Blog</a>
         </nav>
       </div>
     </header>
@@ -472,5 +486,22 @@
       </div>
     </footer>
 
+  <script>
+    document.querySelectorAll('.nav-dropdown').forEach(function(el) {
+      var btn = el.querySelector('.nav-dropdown-btn');
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var o = el.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', o);
+      });
+    });
+    document.addEventListener('click', function() {
+      document.querySelectorAll('.nav-dropdown').forEach(function(el) {
+        el.classList.remove('is-open');
+        var b = el.querySelector('.nav-dropdown-btn');
+        if (b) b.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
   </body>
 </html>
