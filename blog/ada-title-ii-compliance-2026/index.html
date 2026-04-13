@@ -162,25 +162,45 @@
       }
       :focus-visible { outline: 2px solid #01a39e; outline-offset: 2px; border-radius: 4px; }
 
-      /* ─── Header ─── */
-      .site-header { position: sticky; top: 0; z-index: 100; background: var(--eyeco-black); height: 64px; display: flex; align-items: center; border-bottom: 1px solid #1a1a1a; }
-      .header-inner { width: 80%; max-width: 1280px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
-      .header-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-      .header-logo img { height: 32px; width: auto; }
-      .header-nav { display: flex; align-items: center; gap: 28px; }
-      .header-nav a { color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; text-decoration: none; transition: color 0.15s; }
-      .header-nav a:hover { color: var(--eyeco-white); }
-      .header-nav a.active { color: var(--eyeco-teal); }
-      .nav-dropdown { position: relative; }
-      .nav-dropdown-btn { background: none; border: none; cursor: pointer; color: var(--eyeco-teal); font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; padding: 0; display: flex; align-items: center; gap: 4px; transition: color 0.15s; }
-      .nav-dropdown-btn:hover { color: #fff; }
-      .nav-dropdown-btn svg { transition: transform 0.2s; }
-      .nav-dropdown.is-open .nav-dropdown-btn svg { transform: rotate(180deg); }
-      .nav-dropdown-menu { display: none; position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%); background: #111; border: 1px solid #2a2a2a; border-radius: 8px; min-width: 200px; padding: 6px 0; z-index: 200; }
-      .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
-      .nav-dropdown-menu a { display: block; padding: 10px 18px; color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; text-decoration: none; transition: color 0.15s, background 0.15s; }
-      .nav-dropdown-menu a:hover { color: #fff; background: #1a1a1a; }
-      .nav-dropdown-menu a.active { color: var(--eyeco-teal); }
+          /* ===== SHARED HEADER ===== */
+    .skip-link { position: absolute; top: -100px; left: 16px; background: #00f5d0; color: #000; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700; padding: 8px 16px; border-radius: 4px; z-index: 9999; text-decoration: none; }
+    .skip-link:focus { top: 8px; }
+    .site-header { position: sticky; top: 0; z-index: 100; background: #000; height: 64px; display: flex; align-items: center; border-bottom: 1px solid #1a1a1a; }
+    .header-inner { width: 80%; max-width: 1280px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .header-logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
+    .header-logo img { height: 32px; width: auto; }
+    .header-nav { display: flex; align-items: center; gap: 24px; }
+    .header-nav > a { color: #fff; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700; text-decoration: none; transition: color 0.15s; white-space: nowrap; }
+    .header-nav > a:hover { color: #00f5d0; }
+    .header-nav > a:focus-visible { color: #00f5d0; outline: 2px solid #00f5d0; outline-offset: 2px; border-radius: 2px; }
+    .header-nav > a.active { color: #00f5d0; }
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-btn { background: none; border: none; cursor: pointer; color: #fff; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700; padding: 0; display: flex; align-items: center; gap: 4px; transition: color 0.15s; white-space: nowrap; }
+    .nav-dropdown-btn:hover { color: #00f5d0; }
+    .nav-dropdown-btn:focus-visible { color: #00f5d0; outline: 2px solid #00f5d0; outline-offset: 4px; border-radius: 2px; }
+    .nav-dropdown-btn svg { transition: transform 0.2s; }
+    .nav-dropdown.is-open .nav-dropdown-btn svg { transform: rotate(180deg); }
+    .nav-dropdown-menu { display: none; position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%); background: #111; border: 1px solid #2a2a2a; border-radius: 8px; min-width: 200px; padding: 6px 0; z-index: 200; }
+    .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+    .nav-dropdown-menu a { display: block; padding: 10px 18px; color: #fff; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700; text-decoration: none; transition: color 0.15s, background 0.15s; }
+    .nav-dropdown-menu a:hover { color: #00f5d0; background: #1a1a1a; }
+    .nav-dropdown-menu a:focus-visible { color: #00f5d0; background: #1a1a1a; outline: 2px solid #00f5d0; outline-offset: -2px; }
+    .nav-dropdown-menu a.active { color: #00f5d0; }
+    .nav-cta { display: inline-flex; align-items: center; background: #01a39e; color: #fff !important; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700; padding: 8px 18px; border-radius: 6px; text-decoration: none; white-space: nowrap; transition: background 0.15s; flex-shrink: 0; }
+    .nav-cta:hover { background: #019289; }
+    .nav-cta:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+    .nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; color: #fff; line-height: 0; }
+    .nav-hamburger:focus-visible { outline: 2px solid #00f5d0; border-radius: 4px; }
+    .mobile-menu { display: none; position: fixed; inset: 64px 0 0 0; background: #000; z-index: 99; overflow-y: auto; padding: 24px 24px 40px; border-top: 1px solid #1a1a1a; }
+    .mobile-menu.is-open { display: flex; flex-direction: column; gap: 4px; }
+    .mobile-menu a { color: #fff; font-family: 'DM Sans', sans-serif; font-size: 17px; font-weight: 700; text-decoration: none; padding: 14px 0; border-bottom: 1px solid #1a1a1a; transition: color 0.15s; }
+    .mobile-menu a:hover { color: #00f5d0; }
+    .mobile-menu a:focus-visible { color: #00f5d0; outline: 2px solid #00f5d0; outline-offset: 2px; }
+    .mobile-menu a.active { color: #00f5d0; }
+    .mobile-menu-cta { display: inline-flex !important; align-items: center; justify-content: center; background: #01a39e !important; color: #fff !important; font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 700 !important; padding: 14px 24px !important; border-radius: 8px; text-decoration: none; margin-top: 20px; border-bottom: none !important; transition: background 0.15s; }
+    .mobile-menu-cta:hover { background: #019289 !important; color: #fff !important; }
+    @media (max-width: 900px) { .header-inner { width: 92%; } .header-nav { gap: 16px; } }
+    @media (max-width: 768px) { .header-nav, .nav-cta { display: none; } .nav-hamburger { display: block; } } }
 
       /* ─── Post layout ─── */
       .post-page { background: var(--eyeco-bg); padding-bottom: 80px; }
@@ -279,13 +299,13 @@
       .footer-tagline { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--eyeco-slate); line-height: 1.65; max-width: 260px; }
       .footer-col-title { font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--eyeco-white); margin-bottom: 16px; }
       .footer-col-links { display: flex; flex-direction: column; gap: 10px; list-style: none; }
-      .footer-col-links a { font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--eyeco-slate); text-decoration: none; transition: color 0.15s; }
-      .footer-col-links a:hover { color: var(--eyeco-white); }
+      .footer-col-links a { font-family: 'DM Sans', sans-serif; font-size: 14px; color: #fff; font-weight: 700; text-decoration: none; transition: color 0.15s; }
+      .footer-col-links a:hover { color: #00f5d0; }
       .footer-bottom { padding: 24px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
       .footer-copy { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--eyeco-slate); }
       .footer-bottom-links { display: flex; gap: 20px; }
-      .footer-bottom-links a { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--eyeco-slate); text-decoration: none; transition: color 0.15s; }
-      .footer-bottom-links a:hover { color: var(--eyeco-white); }
+      .footer-bottom-links a { font-family: 'DM Sans', sans-serif; font-size: 12px; color: #ccc; font-weight: 600; text-decoration: none; transition: color 0.15s; }
+      .footer-bottom-links a:hover { color: #00f5d0; }
 
       /* Responsive */
       @media (max-width: 768px) {
@@ -302,33 +322,46 @@
   <body>
 
     <!-- ─── Header ─── -->
-    <header class="site-header" role="banner">
-      <div class="header-inner">
-        <a href="/" class="header-logo" aria-label="Eyecosystems home">
-          <img src="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png" alt="Eyecosystems logo" width="32" height="32" />
-          
-        </a>
-        <nav class="header-nav" role="navigation" aria-label="Main navigation">
-          <a href="/">Home</a>
-          <a href="/our-data">Our Data</a>
-          <div class="nav-dropdown" id="about-dropdown">
-            <button class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false" aria-controls="about-menu">
-              About
-              <svg class="nav-dropdown-icon" width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M2 3.5l3.5 3.5 3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="nav-dropdown-menu" id="about-menu" role="menu">
-              <a href="/about" role="menuitem">About Eyecosystems</a>
-              <a href="/blog" role="menuitem" class="active">Blog</a>
-            </div>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="/" class="header-logo" aria-label="Eyecosystems home">
+        <img src="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png" alt="Eyecosystems logo" width="32" height="32" />
+      </a>
+      <nav class="header-nav" role="navigation" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/our-data">Our Data</a>
+        <div class="nav-dropdown" role="none">
+          <button class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false" aria-label="About submenu">
+            About
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="/about" role="menuitem">About Eyecosystems</a>
+            <a href="/blog" role="menuitem" class="active">Blog</a>
           </div>
-          <a href="/docs">Docs</a>
-          <a href="/investors">Investors</a>
-          <a href="/contact">Contact</a>
-        </nav>
-      </div>
-    </header>
-
-    <!-- ─── Featured Image ─── -->
+        </div>
+        <a href="/docs">Docs</a>
+        <a href="/investors">Investors</a>
+        <a href="/contact">Contact</a>
+      </nav>
+      <a href="/book-demo" class="nav-cta">Book a Demo</a>
+      <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="6" width="18" height="2" rx="1" fill="currentColor"/><rect x="3" y="11" width="18" height="2" rx="1" fill="currentColor"/><rect x="3" y="16" width="18" height="2" rx="1" fill="currentColor"/></svg>
+      </button>
+    </div>
+  </header>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+    <a href="/">Home</a>
+    <a href="/our-data">Our Data</a>
+    <a href="/about">About Eyecosystems</a>
+    <a href="/blog" class="active">Blog</a>
+    <a href="/docs">Docs</a>
+    <a href="/investors">Investors</a>
+    <a href="/contact">Contact</a>
+    <a href="/book-demo" class="mobile-menu-cta">Book a Demo</a>
+  </nav>
+<!-- ─── Featured Image ─── -->
     <div class="post-hero-image-wrap">
       <img
         class="post-hero-image"
@@ -666,21 +699,27 @@
       });
     });
     // Nav dropdown
+        // Dropdown
+    // Dropdown
     document.querySelectorAll('.nav-dropdown').forEach(function(el) {
       var btn = el.querySelector('.nav-dropdown-btn');
-      btn.addEventListener('click', function(e) {
-        e.stopPropagation();
-        var o = el.classList.toggle('is-open');
-        btn.setAttribute('aria-expanded', o);
-      });
+      btn.addEventListener('click', function(e) { e.stopPropagation(); var o = el.classList.toggle('is-open'); btn.setAttribute('aria-expanded', o); });
     });
     document.addEventListener('click', function() {
-      document.querySelectorAll('.nav-dropdown').forEach(function(el) {
-        el.classList.remove('is-open');
-        var b = el.querySelector('.nav-dropdown-btn');
-        if (b) b.setAttribute('aria-expanded', 'false');
-      });
+      document.querySelectorAll('.nav-dropdown').forEach(function(el) { el.classList.remove('is-open'); var b = el.querySelector('.nav-dropdown-btn'); if (b) b.setAttribute('aria-expanded','false'); });
     });
-  </script>
+    // Hamburger
+    var hamburger = document.querySelector('.nav-hamburger');
+    var mobileMenu = document.getElementById('mobile-menu');
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener('click', function() {
+        var isOpen = mobileMenu.classList.toggle('is-open');
+        hamburger.setAttribute('aria-expanded', isOpen);
+        hamburger.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="6" width="18" height="2" rx="1" fill="currentColor"/><rect x="3" y="11" width="18" height="2" rx="1" fill="currentColor"/><rect x="3" y="16" width="18" height="2" rx="1" fill="currentColor"/></svg>';
+      });
+    }
+      </script>
   </body>
 </html>

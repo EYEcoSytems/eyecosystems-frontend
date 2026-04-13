@@ -30,25 +30,45 @@
     :focus-visible { outline: 2px solid #01a39e; outline-offset: 2px; border-radius: 4px; }
     @media (max-width: 768px) { .header-inner, .footer-inner { width: 92% !important; } .site-nav { display: none; } }
 
-    /* ── HEADER ── */
+        /* ===== SHARED HEADER ===== */
+    .skip-link { position: absolute; top: -100px; left: 16px; background: #00f5d0; color: #000; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700; padding: 8px 16px; border-radius: 4px; z-index: 9999; text-decoration: none; }
+    .skip-link:focus { top: 8px; }
     .site-header { position: sticky; top: 0; z-index: 100; background: #000; height: 64px; display: flex; align-items: center; border-bottom: 1px solid #1a1a1a; }
-    .header-inner { width: 80%; max-width: 1280px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
-    .site-logo { display: flex; align-items: center; text-decoration: none; }
-    .site-logo img { height: 32px; width: auto; }
-    .site-nav { display: flex; align-items: center; gap: 28px; }
-    .site-nav > a { color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; text-decoration: none; transition: color 0.15s; }
-    .site-nav > a:hover { color: #fff; }
-    .site-nav > a.active { color: #00f5d0; }
-    .nav-dropdown { position: relative; display: flex; align-items: center; }
-    .nav-dropdown-btn { background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 5px; color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; padding: 0; transition: color 0.15s; }
-    .nav-dropdown-btn:hover, .nav-dropdown.is-open .nav-dropdown-btn { color: #fff; }
-    .nav-dropdown-icon { transition: transform 0.2s; }
-    .nav-dropdown.is-open .nav-dropdown-icon { transform: rotate(180deg); }
-    .nav-dropdown-menu { display: none; position: absolute; top: calc(100% + 16px); right: -8px; background: #111; border: 1px solid #2a2a2a; border-radius: 8px; padding: 6px; min-width: 190px; z-index: 200; box-shadow: 0 8px 24px rgba(0,0,0,0.5); }
+    .header-inner { width: 80%; max-width: 1280px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .header-logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
+    .header-logo img { height: 32px; width: auto; }
+    .header-nav { display: flex; align-items: center; gap: 24px; }
+    .header-nav > a { color: #fff; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700; text-decoration: none; transition: color 0.15s; white-space: nowrap; }
+    .header-nav > a:hover { color: #00f5d0; }
+    .header-nav > a:focus-visible { color: #00f5d0; outline: 2px solid #00f5d0; outline-offset: 2px; border-radius: 2px; }
+    .header-nav > a.active { color: #00f5d0; }
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-btn { background: none; border: none; cursor: pointer; color: #fff; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700; padding: 0; display: flex; align-items: center; gap: 4px; transition: color 0.15s; white-space: nowrap; }
+    .nav-dropdown-btn:hover { color: #00f5d0; }
+    .nav-dropdown-btn:focus-visible { color: #00f5d0; outline: 2px solid #00f5d0; outline-offset: 4px; border-radius: 2px; }
+    .nav-dropdown-btn svg { transition: transform 0.2s; }
+    .nav-dropdown.is-open .nav-dropdown-btn svg { transform: rotate(180deg); }
+    .nav-dropdown-menu { display: none; position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%); background: #111; border: 1px solid #2a2a2a; border-radius: 8px; min-width: 200px; padding: 6px 0; z-index: 200; }
     .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
-    .nav-dropdown-menu a { display: block; padding: 9px 14px; color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; text-decoration: none; border-radius: 5px; transition: background 0.1s, color 0.1s; }
-    .nav-dropdown-menu a:hover { background: #1e1e1e; color: #fff; }
+    .nav-dropdown-menu a { display: block; padding: 10px 18px; color: #fff; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700; text-decoration: none; transition: color 0.15s, background 0.15s; }
+    .nav-dropdown-menu a:hover { color: #00f5d0; background: #1a1a1a; }
+    .nav-dropdown-menu a:focus-visible { color: #00f5d0; background: #1a1a1a; outline: 2px solid #00f5d0; outline-offset: -2px; }
     .nav-dropdown-menu a.active { color: #00f5d0; }
+    .nav-cta { display: inline-flex; align-items: center; background: #01a39e; color: #fff !important; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700; padding: 8px 18px; border-radius: 6px; text-decoration: none; white-space: nowrap; transition: background 0.15s; flex-shrink: 0; }
+    .nav-cta:hover { background: #019289; }
+    .nav-cta:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+    .nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; color: #fff; line-height: 0; }
+    .nav-hamburger:focus-visible { outline: 2px solid #00f5d0; border-radius: 4px; }
+    .mobile-menu { display: none; position: fixed; inset: 64px 0 0 0; background: #000; z-index: 99; overflow-y: auto; padding: 24px 24px 40px; border-top: 1px solid #1a1a1a; }
+    .mobile-menu.is-open { display: flex; flex-direction: column; gap: 4px; }
+    .mobile-menu a { color: #fff; font-family: 'DM Sans', sans-serif; font-size: 17px; font-weight: 700; text-decoration: none; padding: 14px 0; border-bottom: 1px solid #1a1a1a; transition: color 0.15s; }
+    .mobile-menu a:hover { color: #00f5d0; }
+    .mobile-menu a:focus-visible { color: #00f5d0; outline: 2px solid #00f5d0; outline-offset: 2px; }
+    .mobile-menu a.active { color: #00f5d0; }
+    .mobile-menu-cta { display: inline-flex !important; align-items: center; justify-content: center; background: #01a39e !important; color: #fff !important; font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 700 !important; padding: 14px 24px !important; border-radius: 8px; text-decoration: none; margin-top: 20px; border-bottom: none !important; transition: background 0.15s; }
+    .mobile-menu-cta:hover { background: #019289 !important; color: #fff !important; }
+    @media (max-width: 900px) { .header-inner { width: 92%; } .header-nav { gap: 16px; } }
+    @media (max-width: 768px) { .header-nav, .nav-cta { display: none; } .nav-hamburger { display: block; } } }
 
     /* ── FOOTER ── */
     .site-footer { background: #000; border-top: 1px solid #1a1a1a; padding: 60px 0 0; margin-top: 80px; }
@@ -64,8 +84,8 @@
     .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; flex-wrap: wrap; gap: 12px; }
     .footer-copy { font-family: 'DM Sans', sans-serif; font-size: 12px; color: #444; }
     .footer-bottom-links { display: flex; gap: 20px; }
-    .footer-bottom-links a { font-family: 'DM Sans', sans-serif; font-size: 12px; color: #444; text-decoration: none; transition: color 0.15s; }
-    .footer-bottom-links a:hover { color: #fff; }
+    .footer-bottom-links a { font-family: 'DM Sans', sans-serif; font-size: 12px; color: #ccc; font-weight: 600; text-decoration: none; transition: color 0.15s; }
+    .footer-bottom-links a:hover { color: #00f5d0; }
     @media (max-width: 768px) {
       .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
       .footer-bottom { flex-direction: column; align-items: flex-start; }
@@ -192,20 +212,21 @@
 <body>
 
   <!-- HEADER -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <header class="site-header" role="banner">
     <div class="header-inner">
-      <a href="/" class="site-logo" aria-label="Eyecosystems home">
+      <a href="/" class="header-logo" aria-label="Eyecosystems home">
         <img src="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png" alt="Eyecosystems logo" width="32" height="32" />
       </a>
-      <nav class="site-nav" role="navigation" aria-label="Main navigation">
+      <nav class="header-nav" role="navigation" aria-label="Main navigation">
         <a href="/">Home</a>
         <a href="/our-data">Our Data</a>
-        <div class="nav-dropdown" id="about-dropdown">
-          <button class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false" aria-controls="about-menu">
+        <div class="nav-dropdown" role="none">
+          <button class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false" aria-label="About submenu">
             About
-            <svg class="nav-dropdown-icon" width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M2 3.5l3.5 3.5 3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
-          <div class="nav-dropdown-menu" id="about-menu" role="menu">
+          <div class="nav-dropdown-menu" role="menu">
             <a href="/about" role="menuitem">About Eyecosystems</a>
             <a href="/blog" role="menuitem">Blog</a>
           </div>
@@ -214,10 +235,23 @@
         <a href="/investors">Investors</a>
         <a href="/contact">Contact</a>
       </nav>
+      <a href="/book-demo" class="nav-cta">Book a Demo</a>
+      <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="6" width="18" height="2" rx="1" fill="currentColor"/><rect x="3" y="11" width="18" height="2" rx="1" fill="currentColor"/><rect x="3" y="16" width="18" height="2" rx="1" fill="currentColor"/></svg>
+      </button>
     </div>
   </header>
-
-  <!-- HERO -->
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+    <a href="/">Home</a>
+    <a href="/our-data">Our Data</a>
+    <a href="/about">About Eyecosystems</a>
+    <a href="/blog">Blog</a>
+    <a href="/docs">Docs</a>
+    <a href="/investors">Investors</a>
+    <a href="/contact">Contact</a>
+    <a href="/book-demo" class="mobile-menu-cta">Book a Demo</a>
+  </nav>
+<!-- HERO -->
   <section class="page-hero" aria-labelledby="hero-heading">
     <div class="page-hero-inner">
       <p class="hero-label">Legal</p>
@@ -227,7 +261,7 @@
   </section>
 
   <!-- LEGAL CONTENT -->
-  <main>
+  <main id="main-content">
     <div class="legal-wrap">
       <article class="legal-card" aria-label="Terms of Service">
 
@@ -367,13 +401,27 @@
   </footer>
 
   <script>
+        // Dropdown
+    // Dropdown
     document.querySelectorAll('.nav-dropdown').forEach(function(el) {
       var btn = el.querySelector('.nav-dropdown-btn');
       btn.addEventListener('click', function(e) { e.stopPropagation(); var o = el.classList.toggle('is-open'); btn.setAttribute('aria-expanded', o); });
     });
     document.addEventListener('click', function() {
-      document.querySelectorAll('.nav-dropdown').forEach(function(el) { el.classList.remove('is-open'); var b = el.querySelector('.nav-dropdown-btn'); if (b) b.setAttribute('aria-expanded', 'false'); });
+      document.querySelectorAll('.nav-dropdown').forEach(function(el) { el.classList.remove('is-open'); var b = el.querySelector('.nav-dropdown-btn'); if (b) b.setAttribute('aria-expanded','false'); });
     });
-  </script>
+    // Hamburger
+    var hamburger = document.querySelector('.nav-hamburger');
+    var mobileMenu = document.getElementById('mobile-menu');
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener('click', function() {
+        var isOpen = mobileMenu.classList.toggle('is-open');
+        hamburger.setAttribute('aria-expanded', isOpen);
+        hamburger.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="6" width="18" height="2" rx="1" fill="currentColor"/><rect x="3" y="11" width="18" height="2" rx="1" fill="currentColor"/><rect x="3" y="16" width="18" height="2" rx="1" fill="currentColor"/></svg>';
+      });
+    }
+      </script>
 </body>
 </html>
