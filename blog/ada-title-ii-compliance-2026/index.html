@@ -163,26 +163,24 @@
       :focus-visible { outline: 2px solid #01a39e; outline-offset: 2px; border-radius: 4px; }
 
       /* ─── Header ─── */
-      .blog-header { position: sticky; top: 0; z-index: 100; background: #000; height: 64px; display: flex; align-items: center; border-bottom: 1px solid #1a1a1a; }
-      .blog-header-inner { width: 80%; max-width: 1280px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
-      .blog-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-      .blog-logo img { height: 32px; width: auto; }
-      .blog-logo-name { color: #fff; font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 0.02em; }
-      .blog-nav { display: flex; align-items: center; gap: 28px; }
-      .blog-nav > a { color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; text-decoration: none; transition: color 0.15s; }
-      .blog-nav > a:hover { color: #fff; }
-      .blog-nav > a.active { color: #00f5d0; }
-      /* Dropdown */
-      .nav-dropdown { position: relative; display: flex; align-items: center; }
-      .nav-dropdown-btn { background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 5px; color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; padding: 0; transition: color 0.15s; }
-      .nav-dropdown-btn:hover, .nav-dropdown.is-open .nav-dropdown-btn { color: #fff; }
-      .nav-dropdown-icon { transition: transform 0.2s; }
-      .nav-dropdown.is-open .nav-dropdown-icon { transform: rotate(180deg); }
-      .nav-dropdown-menu { display: none; position: absolute; top: calc(100% + 16px); right: -8px; background: #111; border: 1px solid #2a2a2a; border-radius: 8px; padding: 6px; min-width: 190px; z-index: 200; box-shadow: 0 8px 24px rgba(0,0,0,0.5); }
+      .site-header { position: sticky; top: 0; z-index: 100; background: var(--eyeco-black); height: 64px; display: flex; align-items: center; border-bottom: 1px solid #1a1a1a; }
+      .header-inner { width: 80%; max-width: 1280px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+      .header-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+      .header-logo img { height: 32px; width: auto; }
+      .header-nav { display: flex; align-items: center; gap: 28px; }
+      .header-nav a { color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; text-decoration: none; transition: color 0.15s; }
+      .header-nav a:hover { color: var(--eyeco-white); }
+      .header-nav a.active { color: var(--eyeco-teal); }
+      .nav-dropdown { position: relative; }
+      .nav-dropdown-btn { background: none; border: none; cursor: pointer; color: var(--eyeco-teal); font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; padding: 0; display: flex; align-items: center; gap: 4px; transition: color 0.15s; }
+      .nav-dropdown-btn:hover { color: #fff; }
+      .nav-dropdown-btn svg { transition: transform 0.2s; }
+      .nav-dropdown.is-open .nav-dropdown-btn svg { transform: rotate(180deg); }
+      .nav-dropdown-menu { display: none; position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%); background: #111; border: 1px solid #2a2a2a; border-radius: 8px; min-width: 200px; padding: 6px 0; z-index: 200; }
       .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
-      .nav-dropdown-menu a { display: block; padding: 9px 14px; color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; text-decoration: none; border-radius: 5px; transition: background 0.1s, color 0.1s; }
-      .nav-dropdown-menu a:hover { background: #1e1e1e; color: #fff; }
-      .nav-dropdown-menu a.active { color: #00f5d0; }
+      .nav-dropdown-menu a { display: block; padding: 10px 18px; color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; text-decoration: none; transition: color 0.15s, background 0.15s; }
+      .nav-dropdown-menu a:hover { color: #fff; background: #1a1a1a; }
+      .nav-dropdown-menu a.active { color: var(--eyeco-teal); }
 
       /* ─── Post layout ─── */
       .post-page { background: var(--eyeco-bg); padding-bottom: 80px; }
@@ -272,21 +270,31 @@
       .btn-back-blog:hover { gap: 12px; }
 
       /* Footer */
-      .blog-footer { background: var(--eyeco-black); padding: 40px 0; border-top: 1px solid #1a1a1a; margin-top: 80px; }
-      .blog-footer-inner { width: 80%; max-width: 1280px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
-      .blog-footer-copy { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--eyeco-slate); }
-      .blog-footer-links { display: flex; gap: 24px; }
-      .blog-footer-links a { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--eyeco-slate); text-decoration: none; transition: color 0.15s; }
-      .blog-footer-links a:hover { color: var(--eyeco-white); }
+      .site-footer { background: var(--eyeco-black); border-top: 1px solid #1a1a1a; padding: 64px 0 0; }
+      .footer-inner { width: 80%; max-width: 1280px; margin: 0 auto; }
+      .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid #1a1a1a; }
+      .footer-brand-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; text-decoration: none; }
+      .footer-brand-logo img { height: 28px; width: auto; }
+      .footer-brand-name { color: var(--eyeco-white); font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 700; }
+      .footer-tagline { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--eyeco-slate); line-height: 1.65; max-width: 260px; }
+      .footer-col-title { font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--eyeco-white); margin-bottom: 16px; }
+      .footer-col-links { display: flex; flex-direction: column; gap: 10px; list-style: none; }
+      .footer-col-links a { font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--eyeco-slate); text-decoration: none; transition: color 0.15s; }
+      .footer-col-links a:hover { color: var(--eyeco-white); }
+      .footer-bottom { padding: 24px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+      .footer-copy { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--eyeco-slate); }
+      .footer-bottom-links { display: flex; gap: 20px; }
+      .footer-bottom-links a { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--eyeco-slate); text-decoration: none; transition: color 0.15s; }
+      .footer-bottom-links a:hover { color: var(--eyeco-white); }
 
       /* Responsive */
       @media (max-width: 768px) {
-        .blog-header-inner, .blog-footer-inner { width: 92%; }
-        .blog-nav { display: none; }
+        .header-inner, .footer-inner { width: 92%; }
+        .header-nav { display: none; }
         .post-container { width: 92%; }
         .post-hero-image { width: 100%; }
         .post-cta-box { padding: 28px 20px; }
-        .blog-footer-inner { flex-direction: column; align-items: flex-start; }
+        .footer-bottom { flex-direction: column; align-items: flex-start; }
       }
     </style>
   </head>
@@ -294,13 +302,13 @@
   <body>
 
     <!-- ─── Header ─── -->
-    <header class="blog-header" role="banner">
-      <div class="blog-header-inner">
-        <a href="/" class="blog-logo" aria-label="Eyecosystems home">
+    <header class="site-header" role="banner">
+      <div class="header-inner">
+        <a href="/" class="header-logo" aria-label="Eyecosystems home">
           <img src="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png" alt="Eyecosystems logo" width="32" height="32" />
           
         </a>
-        <nav class="blog-nav" role="navigation" aria-label="Main navigation">
+        <nav class="header-nav" role="navigation" aria-label="Main navigation">
           <a href="/">Home</a>
           <a href="/our-data">Our Data</a>
           <div class="nav-dropdown" id="about-dropdown">
@@ -601,14 +609,50 @@
     </main>
 
     <!-- ─── Footer ─── -->
-    <footer class="blog-footer" role="contentinfo">
-      <div class="blog-footer-inner">
-        <span class="blog-footer-copy">&copy; 2026 Eyecosystems. All rights reserved.</span>
-        <nav class="blog-footer-links" aria-label="Footer navigation">
-          <a href="/privacy">Privacy Policy</a>
-          <a href="/terms">Terms of Service</a>
-          <a href="/contact">Contact</a>
-        </nav>
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <div>
+            <a href="/" class="footer-brand-logo" aria-label="Eyecosystems home">
+              <img src="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png" alt="Eyecosystems logo" width="28" height="28" />
+              <span class="footer-brand-name">Eyecosystems</span>
+            </a>
+            <p class="footer-tagline">Human-verified accessibility data for ADA Title II compliance.</p>
+          </div>
+          <div>
+            <div class="footer-col-title">Product</div>
+            <ul class="footer-col-links">
+              <li><a href="/our-data">Our Data</a></li>
+              <li><a href="/docs">Docs</a></li>
+              <li><a href="/book-demo">Book Demo</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-col-title">Company</div>
+            <ul class="footer-col-links">
+              <li><a href="/about">About</a></li>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="/investors">Investors</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-col-title">Legal</div>
+            <ul class="footer-col-links">
+              <li><a href="/privacy">Privacy Policy</a></li>
+              <li><a href="/terms">Terms of Service</a></li>
+              <li><a href="/accessibility-policy">Accessibility</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span class="footer-copy">&copy; 2026 Eyecosystems. All rights reserved. Jacksonville, FL.</span>
+          <nav class="footer-bottom-links" aria-label="Footer legal links">
+            <a href="/privacy">Privacy</a>
+            <a href="/terms">Terms</a>
+            <a href="/contact">Contact</a>
+          </nav>
+        </div>
       </div>
     </footer>
 
