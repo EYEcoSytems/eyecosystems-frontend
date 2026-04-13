@@ -1,412 +1,349 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#000000" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Eyecosystems</title>
+  <meta name="description" content="Contact Eyecosystems. Questions about accessibility data, pricing, or ADA compliance? We'll get back to you within one business day." />
 
-    <title>Contact Eyecosystems — Get in Touch</title>
-    <meta name="description" content="Contact Eyecosystems with questions about our BVI community data, pricing, ADA Title II compliance, or partnership opportunities. We respond within one business day." />
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-940W81LPR1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-940W81LPR1');
+  </script>
 
-    <link rel="canonical" href="https://eyecosystems.com/contact" />
-    <link rel="icon" type="image/png" href="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png" />
-    <link rel="apple-touch-icon" href="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Eyecosystems" />
-    <meta property="og:url" content="https://eyecosystems.com/contact" />
-    <meta property="og:title" content="Contact Eyecosystems" />
-    <meta property="og:description" content="Get in touch with the Eyecosystems team about data access, pricing, or ADA Title II compliance questions." />
-    <meta property="og:image" content="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png" />
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --eyeco-black: #000;
+      --eyeco-dark-blue: #27455c;
+      --eyeco-teal: #00f5d0;
+      --eyeco-data-teal: #01a39e;
+      --eyeco-red: #80142b;
+      --eyeco-white: #fff;
+      --eyeco-slate: #999;
+      --eyeco-bg: #f4f6f8;
+      --eyeco-border: #dde3ea;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--eyeco-bg); color: #1a1a2e; line-height: 1.6; -webkit-font-smoothing: antialiased; }
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@eyecosystems" />
-    <meta name="twitter:title" content="Contact Eyecosystems" />
-    <meta name="twitter:description" content="Get in touch with the Eyecosystems team about data access, pricing, or ADA Title II compliance questions." />
+    /* ===== SHARED HEADER ===== */
+    .site-header { position: sticky; top: 0; z-index: 100; background: #000; height: 64px; display: flex; align-items: center; border-bottom: 1px solid #1a1a1a; }
+    .header-inner { width: 80%; max-width: 1280px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+    .header-logo { display: flex; align-items: center; text-decoration: none; }
+    .header-logo img { height: 32px; width: auto; }
+    .header-nav { display: flex; align-items: center; gap: 28px; }
+    .header-nav > a { color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; text-decoration: none; transition: color 0.15s; }
+    .header-nav > a:hover { color: #fff; }
+    .header-nav > a.active { color: #00f5d0; }
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-btn { background: none; border: none; cursor: pointer; color: #00f5d0; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; padding: 0; display: flex; align-items: center; gap: 4px; transition: color 0.15s; }
+    .nav-dropdown-btn:hover { color: #fff; }
+    .nav-dropdown-btn svg { transition: transform 0.2s; }
+    .nav-dropdown.is-open .nav-dropdown-btn svg { transform: rotate(180deg); }
+    .nav-dropdown-menu { display: none; position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%); background: #111; border: 1px solid #2a2a2a; border-radius: 8px; min-width: 200px; padding: 6px 0; z-index: 200; }
+    .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+    .nav-dropdown-menu a { display: block; padding: 10px 18px; color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; text-decoration: none; transition: color 0.15s, background 0.15s; }
+    .nav-dropdown-menu a:hover { color: #fff; background: #1a1a1a; }
+    .nav-dropdown-menu a.active { color: #00f5d0; }
+    @media (max-width: 768px) { .header-inner { width: 92%; } .header-nav { display: none; } }
 
-    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    /* ===== SHARED FOOTER ===== */
+    .site-footer { background: #000; border-top: 1px solid #1a1a1a; padding: 64px 0 0; margin-top: 0; }
+    .footer-inner { width: 80%; max-width: 1280px; margin: 0 auto; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid #1a1a1a; }
+    .footer-brand-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; text-decoration: none; }
+    .footer-brand-logo img { height: 28px; width: auto; }
+    .footer-brand-name { color: #fff; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 700; }
+    .footer-tagline { font-family: 'DM Sans', sans-serif; font-size: 13px; color: #999; line-height: 1.65; max-width: 260px; }
+    .footer-social { display: flex; gap: 12px; margin-top: 20px; }
+    .footer-social a { color: #555; transition: color 0.15s; }
+    .footer-social a:hover { color: #fff; }
+    .footer-col-title { font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #fff; margin-bottom: 16px; }
+    .footer-col-links { display: flex; flex-direction: column; gap: 10px; list-style: none; padding: 0; margin: 0; }
+    .footer-col-links a { font-family: 'DM Sans', sans-serif; font-size: 14px; color: #999; text-decoration: none; transition: color 0.15s; }
+    .footer-col-links a:hover { color: #fff; }
+    .footer-bottom { padding: 24px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .footer-copy { font-family: 'DM Sans', sans-serif; font-size: 12px; color: #444; }
+    .footer-bottom-links { display: flex; gap: 20px; }
+    .footer-bottom-links a { font-family: 'DM Sans', sans-serif; font-size: 12px; color: #444; text-decoration: none; transition: color 0.15s; }
+    .footer-bottom-links a:hover { color: #fff; }
+    @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+    @media (max-width: 768px) { .footer-inner { width: 92%; } .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; } .footer-bottom { flex-direction: column; align-items: flex-start; } }
+    @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } }
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    /* ===== PAGE LAYOUT ===== */
+    .section-inner { width: 80%; max-width: 1280px; margin: 0 auto; }
+    @media (max-width: 768px) { .section-inner { width: 92%; } }
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-940W81LPR1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-940W81LPR1');
-    </script>
+    /* ===== PAGE HERO ===== */
+    .page-hero { background: #000; padding: 72px 0 64px; border-bottom: 1px solid #1a1a1a; }
+    .page-hero-label { font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--eyeco-data-teal); margin-bottom: 16px; }
+    .page-hero h1 { font-family: 'DM Sans', sans-serif; font-size: clamp(32px, 5vw, 60px); font-weight: 700; color: #fff; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 16px; }
+    .page-hero-sub { font-family: 'DM Sans', sans-serif; font-size: 18px; color: #888; line-height: 1.65; max-width: 560px; }
 
-    <style>
-      /* ─── Reset & tokens ─── */
-      *, *::before, *::after { box-sizing: border-box; border: 0 solid #e5e7eb; }
-      html { -webkit-text-size-adjust: 100%; font-family: 'DM Sans', Helvetica Neue, Helvetica, Arial, sans-serif; line-height: 1.5; }
-      body { margin: 0; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; background: #f4f6f8; color: #111; }
-      h1,h2,h3,h4,h5,h6,p,ul,ol { margin: 0; padding: 0; }
-      a { color: inherit; text-decoration: inherit; }
-      img, svg { display: block; max-width: 100%; height: auto; }
-      :root {
-        --eyeco-black: #000;
-        --eyeco-dark-blue: #27455c;
-        --eyeco-teal: #00f5d0;
-        --eyeco-data-teal: #01a39e;
-        --eyeco-white: #fff;
-        --eyeco-slate: #999;
-        --eyeco-bg: #f4f6f8;
-        --eyeco-border: #dde3ea;
-      }
-      :focus-visible { outline: 2px solid #01a39e; outline-offset: 2px; border-radius: 4px; }
+    /* ===== MAIN CONTENT ===== */
+    .contact-section { background: var(--eyeco-bg); padding: 80px 0; }
+    .contact-layout { display: grid; grid-template-columns: 3fr 2fr; gap: 64px; align-items: start; }
+    @media (max-width: 900px) { .contact-layout { grid-template-columns: 1fr; gap: 40px; } }
 
-      /* ─── Header ─── */
-      .site-header { position: sticky; top: 0; z-index: 100; background: var(--eyeco-black); height: 64px; display: flex; align-items: center; border-bottom: 1px solid #1a1a1a; }
-      .header-inner { width: 80%; max-width: 1280px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
-      .header-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-      .header-logo img { height: 32px; width: auto; }
-      .header-logo-name { color: var(--eyeco-white); font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 0.02em; }
-      .header-nav { display: flex; align-items: center; gap: 28px; }
-      .header-nav a { color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; text-decoration: none; transition: color 0.15s; }
-      .header-nav a:hover { color: var(--eyeco-white); }
-      .header-nav a.active { color: var(--eyeco-teal); }
-      .nav-dropdown { position: relative; }
-      .nav-dropdown-btn { background: none; border: none; cursor: pointer; color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; padding: 0; display: flex; align-items: center; gap: 4px; transition: color 0.15s; }
-      .nav-dropdown-btn:hover { color: #fff; }
-      .nav-dropdown-btn svg { transition: transform 0.2s; }
-      .nav-dropdown.is-open .nav-dropdown-btn svg { transform: rotate(180deg); }
-      .nav-dropdown-menu { display: none; position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%); background: #111; border: 1px solid #2a2a2a; border-radius: 8px; min-width: 200px; padding: 6px 0; z-index: 200; }
-      .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
-      .nav-dropdown-menu a { display: block; padding: 10px 18px; color: #ccc; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; text-decoration: none; transition: color 0.15s, background 0.15s; }
-      .nav-dropdown-menu a:hover { color: #fff; background: #1a1a1a; }
-      .nav-dropdown-menu a.active { color: var(--eyeco-teal); }
-      @media (max-width: 768px) { .header-inner { width: 92%; } .header-nav { display: none; } }
+    /* HubSpot form container */
+    .hs-form-col { background: #fff; border: 1px solid var(--eyeco-border); border-radius: 16px; padding: 36px; min-height: 400px; }
+    .hs-form-col-label { font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--eyeco-data-teal); margin-bottom: 24px; }
 
-      /* ─── Page hero ─── */
-      .page-hero { background: var(--eyeco-black); padding: 72px 0 60px; border-bottom: 1px solid #1a1a1a; }
-      .page-hero-inner { width: 80%; max-width: 1280px; margin: 0 auto; }
-      .page-label { font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--eyeco-teal); margin-bottom: 16px; }
-      .page-h1 { font-family: 'DM Sans', sans-serif; font-size: clamp(32px, 5vw, 52px); font-weight: 800; color: var(--eyeco-white); line-height: 1.1; margin-bottom: 20px; max-width: 640px; }
-      .page-subtitle { font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 400; color: var(--eyeco-slate); max-width: 560px; line-height: 1.6; }
+    /* Contact info panel */
+    .contact-info { display: flex; flex-direction: column; gap: 28px; }
+    .contact-info-block { background: #fff; border: 1px solid var(--eyeco-border); border-radius: 12px; padding: 24px 28px; }
+    .contact-info-title { font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--eyeco-slate); margin-bottom: 16px; }
+    .contact-info-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; }
+    .contact-info-row:last-child { margin-bottom: 0; }
+    .contact-info-icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+    .contact-info-text { font-family: 'DM Sans', sans-serif; font-size: 15px; color: #2d3748; line-height: 1.5; }
+    .contact-info-text a { color: var(--eyeco-data-teal); text-decoration: none; }
+    .contact-info-text a:hover { text-decoration: underline; }
+    .contact-info-label { font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--eyeco-slate); margin-top: 2px; }
+    .contact-cta-links { display: flex; flex-direction: column; gap: 10px; }
+    .contact-cta-link { display: flex; align-items: center; gap: 10px; padding: 14px 18px; background: var(--eyeco-bg); border: 1px solid var(--eyeco-border); border-radius: 8px; text-decoration: none; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; color: #1a1a2e; transition: background 0.15s, border-color 0.15s; }
+    .contact-cta-link:hover { background: #eaf0f5; border-color: var(--eyeco-data-teal); color: var(--eyeco-data-teal); }
+    .contact-cta-link-icon { font-size: 18px; }
 
-      /* ─── Contact layout ─── */
-      .contact-section { background: var(--eyeco-white); padding: 72px 0; }
-      .contact-inner { width: 80%; max-width: 1280px; margin: 0 auto; }
-      .contact-grid { display: grid; grid-template-columns: 1fr 380px; gap: 64px; align-items: start; }
+    /* ===== OTHER WAYS SECTION ===== */
+    .other-ways { background: #fff; padding: 64px 0; border-top: 1px solid var(--eyeco-border); }
+    .other-ways-label { font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--eyeco-data-teal); margin-bottom: 12px; }
+    .other-ways h2 { font-family: 'DM Sans', sans-serif; font-size: clamp(22px, 3vw, 32px); font-weight: 700; color: #1a1a2e; margin-bottom: 40px; }
+    .other-ways-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    @media (max-width: 768px) { .other-ways-grid { grid-template-columns: 1fr; } }
+    .ow-card { background: var(--eyeco-bg); border: 1px solid var(--eyeco-border); border-radius: 12px; padding: 28px; text-decoration: none; transition: border-color 0.15s, box-shadow 0.15s; display: block; }
+    .ow-card:hover { border-color: var(--eyeco-data-teal); box-shadow: 0 4px 16px rgba(1,163,158,0.1); }
+    .ow-card-icon { font-size: 28px; margin-bottom: 14px; display: block; }
+    .ow-card-title { font-family: 'DM Sans', sans-serif; font-size: 17px; font-weight: 700; color: #1a1a2e; margin-bottom: 8px; }
+    .ow-card-body { font-family: 'DM Sans', sans-serif; font-size: 14px; color: #4a5568; line-height: 1.6; }
+    .ow-card-arrow { font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; color: var(--eyeco-data-teal); margin-top: 12px; display: inline-block; }
+  </style>
+</head>
+<body>
 
-      /* ─── Form ─── */
-      .contact-form-wrap {}
-      .contact-form-title { font-family: 'DM Sans', sans-serif; font-size: 22px; font-weight: 800; color: var(--eyeco-black); margin-bottom: 28px; }
-      .form-group { margin-bottom: 20px; }
-      .form-label { display: block; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600; color: #333; margin-bottom: 6px; }
-      .form-label span { color: var(--eyeco-data-teal); }
-      .form-input, .form-select, .form-textarea {
-        width: 100%; padding: 11px 14px;
-        border: 1.5px solid var(--eyeco-border); border-radius: 8px;
-        font-family: 'DM Sans', sans-serif; font-size: 15px; color: #111;
-        background: var(--eyeco-white);
-        transition: border-color 0.15s, box-shadow 0.15s;
-        appearance: none;
-      }
-      .form-input:focus, .form-select:focus, .form-textarea:focus {
-        outline: none; border-color: var(--eyeco-data-teal);
-        box-shadow: 0 0 0 3px rgba(1,163,158,0.12);
-      }
-      .form-select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='%23999' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; cursor: pointer; }
-      .form-textarea { resize: vertical; min-height: 130px; line-height: 1.6; }
-      .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-      .btn-submit {
-        display: inline-block; background: var(--eyeco-data-teal); color: var(--eyeco-white);
-        font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 700;
-        padding: 13px 32px; border-radius: 8px; border: none; cursor: pointer;
-        transition: background 0.15s, transform 0.1s; width: 100%; text-align: center;
-        margin-top: 4px;
-      }
-      .btn-submit:hover { background: #018a84; transform: translateY(-1px); }
-      .btn-submit:active { transform: translateY(0); }
-      .form-note { font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--eyeco-slate); margin-top: 10px; text-align: center; }
+  <!-- SHARED HEADER (active: Contact) -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="/" class="header-logo" aria-label="Eyecosystems home">
+        <img src="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png" alt="Eyecosystems logo" width="32" height="32" />
+      </a>
+      <nav class="header-nav" role="navigation" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/our-data">Our Data</a>
+        <div class="nav-dropdown" role="none">
+          <button class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false" aria-label="About menu">
+            About
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="/about" role="menuitem">About Eyecosystems</a>
+            <a href="/blog" role="menuitem">Blog</a>
+          </div>
+        </div>
+        <a href="/docs">Docs</a>
+        <a href="/investors">Investors</a>
+        <a href="/contact" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-      /* ─── Contact info panel ─── */
-      .contact-info { display: flex; flex-direction: column; gap: 24px; }
-      .info-card { background: var(--eyeco-bg); border: 1px solid var(--eyeco-border); border-radius: 12px; padding: 24px; }
-      .info-card-title { font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--eyeco-data-teal); margin-bottom: 10px; }
-      .info-card-value { font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; color: var(--eyeco-black); }
-      .info-card-sub { font-family: 'DM Sans', sans-serif; font-size: 13px; color: #666; margin-top: 4px; line-height: 1.55; }
-      .info-link { color: var(--eyeco-data-teal); text-decoration: none; font-weight: 600; }
-      .info-link:hover { text-decoration: underline; }
+  <!-- PAGE HERO -->
+  <section class="page-hero" aria-label="Contact page header">
+    <div class="section-inner">
+      <div class="page-hero-label">Get in Touch</div>
+      <h1>Contact Eyecosystems</h1>
+      <p class="page-hero-sub">Questions about the data, pricing, or compliance? We'll get back to you within one business day.</p>
+    </div>
+  </section>
 
-      /* ─── Other ways section ─── */
-      .other-section { background: var(--eyeco-bg); padding: 64px 0; }
-      .other-inner { width: 80%; max-width: 1280px; margin: 0 auto; }
-      .other-title { font-family: 'DM Sans', sans-serif; font-size: 22px; font-weight: 800; color: var(--eyeco-black); margin-bottom: 32px; }
-      .other-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-      .other-card { background: var(--eyeco-white); border: 1px solid var(--eyeco-border); border-radius: 12px; padding: 28px; text-decoration: none; transition: box-shadow 0.18s, border-color 0.18s; display: block; }
-      .other-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-color: #c8d2db; }
-      .other-card-icon { width: 44px; height: 44px; background: #e6f7f6; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
-      .other-card-title { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 700; color: var(--eyeco-black); margin-bottom: 8px; }
-      .other-card-body { font-family: 'DM Sans', sans-serif; font-size: 14px; color: #555; line-height: 1.6; }
-      .other-card-arrow { display: inline-block; margin-top: 12px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600; color: var(--eyeco-data-teal); }
+  <!-- MAIN CONTACT SECTION -->
+  <section class="contact-section" aria-label="Contact form and information">
+    <div class="section-inner">
+      <div class="contact-layout">
 
-      /* ─── Footer ─── */
-      .site-footer { background: var(--eyeco-black); border-top: 1px solid #1a1a1a; padding: 64px 0 0; }
-      .footer-inner { width: 80%; max-width: 1280px; margin: 0 auto; }
-      .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid #1a1a1a; }
-      .footer-brand-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; text-decoration: none; }
-      .footer-brand-logo img { height: 28px; width: auto; }
-      .footer-brand-name { color: var(--eyeco-white); font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 700; }
-      .footer-tagline { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--eyeco-slate); line-height: 1.65; max-width: 260px; }
-      .footer-col-title { font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--eyeco-white); margin-bottom: 16px; }
-      .footer-col-links { display: flex; flex-direction: column; gap: 10px; list-style: none; }
-      .footer-col-links a { font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--eyeco-slate); text-decoration: none; transition: color 0.15s; }
-      .footer-col-links a:hover { color: var(--eyeco-white); }
-      .footer-bottom { padding: 24px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-      .footer-copy { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--eyeco-slate); }
-      .footer-bottom-links { display: flex; gap: 20px; }
-      .footer-bottom-links a { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--eyeco-slate); text-decoration: none; transition: color 0.15s; }
-      .footer-bottom-links a:hover { color: var(--eyeco-white); }
+        <!-- LEFT: HubSpot Form -->
+        <div class="hs-form-col">
+          <div class="hs-form-col-label">Send us a message</div>
 
-      /* ─── Responsive ─── */
-      @media (max-width: 960px) { .contact-grid { grid-template-columns: 1fr; } .other-grid { grid-template-columns: 1fr 1fr; } .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
-      @media (max-width: 768px) {
-        .page-hero-inner, .contact-inner, .other-inner, .footer-inner { width: 92%; }
-        .form-row { grid-template-columns: 1fr; }
-        .other-grid { grid-template-columns: 1fr; }
-        .footer-grid { grid-template-columns: 1fr; }
-        .footer-bottom { flex-direction: column; align-items: flex-start; }
-      }
-    </style>
-  </head>
+          <!-- HubSpot Form Embed -->
+          <!-- Replace YOUR_PORTAL_ID and YOUR_FORM_ID with your actual HubSpot values -->
+          <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+          <div id="hubspot-contact-form"></div>
+          <script>
+            hbspt.forms.create({
+              region: "na1",
+              portalId: "YOUR_PORTAL_ID",
+              formId: "YOUR_FORM_ID",
+              target: "#hubspot-contact-form"
+            });
+          </script>
+        </div>
 
-  <body>
-
-    <!-- ─── Header ─── -->
-    <header class="site-header" role="banner">
-      <div class="header-inner">
-        <a href="/" class="header-logo" aria-label="Eyecosystems home">
-          <img src="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png" alt="Eyecosystems logo" width="32" height="32" />
-        </a>
-        <nav class="header-nav" role="navigation" aria-label="Main navigation">
-          <a href="/">Home</a>
-          <a href="/our-data">Our Data</a>
-          <div class="nav-dropdown" role="none">
-            <button class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false" aria-label="About menu">
-              About
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-                <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
-            <div class="nav-dropdown-menu" role="menu">
-              <a href="/about" role="menuitem">About Eyecosystems</a>
-              <a href="/blog" role="menuitem">Blog</a>
+        <!-- RIGHT: Contact Info -->
+        <div class="contact-info">
+          <div class="contact-info-block">
+            <div class="contact-info-title">Contact Details</div>
+            <div class="contact-info-row">
+              <span class="contact-info-icon" aria-hidden="true">✉️</span>
+              <div>
+                <div class="contact-info-text"><a href="mailto:contact@eyecosystems.com">contact@eyecosystems.com</a></div>
+                <div class="contact-info-label">General inquiries</div>
+              </div>
+            </div>
+            <div class="contact-info-row">
+              <span class="contact-info-icon" aria-hidden="true">📍</span>
+              <div>
+                <div class="contact-info-text">Jacksonville, FL</div>
+                <div class="contact-info-label">Headquarters</div>
+              </div>
+            </div>
+            <div class="contact-info-row">
+              <span class="contact-info-icon" aria-hidden="true">⏱️</span>
+              <div>
+                <div class="contact-info-text">1 business day</div>
+                <div class="contact-info-label">Typical response time</div>
+              </div>
             </div>
           </div>
-          <a href="/docs">Docs</a>
-          <a href="/investors">Investors</a>
-          <a href="/contact" class="active" aria-current="page">Contact</a>
+
+          <div class="contact-info-block">
+            <div class="contact-info-title">Quick Links</div>
+            <div class="contact-cta-links">
+              <a href="/book-demo" class="contact-cta-link">
+                <span class="contact-cta-link-icon" aria-hidden="true">📅</span>
+                Book a Demo
+              </a>
+              <a href="/docs" class="contact-cta-link">
+                <span class="contact-cta-link-icon" aria-hidden="true">📄</span>
+                View Documentation
+              </a>
+              <a href="/our-data" class="contact-cta-link">
+                <span class="contact-cta-link-icon" aria-hidden="true">🗄️</span>
+                Explore the Data
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- OTHER WAYS TO CONNECT -->
+  <section class="other-ways" aria-labelledby="other-ways-heading">
+    <div class="section-inner">
+      <div class="other-ways-label">◆ Other Ways to Connect</div>
+      <h2 id="other-ways-heading">More ways to reach us</h2>
+      <div class="other-ways-grid">
+
+        <a href="/book-demo" class="ow-card">
+          <span class="ow-card-icon" aria-hidden="true">📅</span>
+          <div class="ow-card-title">Book a Demo</div>
+          <p class="ow-card-body">Schedule a 20-minute walkthrough of the dataset. We'll show you exactly what's available for your jurisdiction.</p>
+          <span class="ow-card-arrow">Book now →</span>
+        </a>
+
+        <a href="/docs" class="ow-card">
+          <span class="ow-card-icon" aria-hidden="true">📖</span>
+          <div class="ow-card-title">View Documentation</div>
+          <p class="ow-card-body">Explore our API docs, data schemas, and integration guides. Everything you need to get started fast.</p>
+          <span class="ow-card-arrow">Read docs →</span>
+        </a>
+
+        <a href="https://www.linkedin.com/company/eyecosystems/" target="_blank" rel="noopener" class="ow-card">
+          <span class="ow-card-icon" aria-hidden="true">💼</span>
+          <div class="ow-card-title">LinkedIn</div>
+          <p class="ow-card-body">Follow us for product updates, compliance news, and data releases. Connect with our team directly.</p>
+          <span class="ow-card-arrow">Follow us ↗</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SHARED FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <a href="/" class="footer-brand-logo" aria-label="Eyecosystems home">
+            <img src="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png" alt="Eyecosystems" width="28" height="28" />
+            <span class="footer-brand-name">Eyecosystems</span>
+          </a>
+          <p class="footer-tagline">Human-verified accessibility data for cities, counties, and GovTech vendors navigating ADA compliance.</p>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/company/eyecosystems/" aria-label="LinkedIn" target="_blank" rel="noopener">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://x.com/eyecosystems" aria-label="X / Twitter" target="_blank" rel="noopener">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.261 5.635 5.902-5.635zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://github.com/eyecosystems" aria-label="GitHub" target="_blank" rel="noopener">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Platform</div>
+          <ul class="footer-col-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/our-data">Our Data</a></li>
+            <li><a href="/docs">Docs</a></li>
+            <li><a href="/book-demo">Book Demo</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Company</div>
+          <ul class="footer-col-links">
+            <li><a href="/about">About</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/investors">Investors</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="https://eyespyfoundation.org" target="_blank" rel="noopener">Eye Spy Foundation ↗</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Legal</div>
+          <ul class="footer-col-links">
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms of Service</a></li>
+            <li><a href="/accessibility-policy">Accessibility</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">&copy; 2026 Eyecosystems — A national accessibility data utility. Powered by the Eye Spy Foundation verification network.</span>
+        <nav class="footer-bottom-links" aria-label="Footer legal links">
+          <a href="/privacy">Privacy</a>
+          <a href="/terms">Terms</a>
+          <a href="/contact">Contact</a>
         </nav>
       </div>
-    </header>
+    </div>
+  </footer>
 
-    <!-- ─── Page Hero ─── -->
-    <section class="page-hero" aria-label="Contact page header">
-      <div class="page-hero-inner">
-        <p class="page-label">GET IN TOUCH</p>
-        <h1 class="page-h1">Contact Eyecosystems</h1>
-        <p class="page-subtitle">Questions about the data, pricing, or compliance? We'll get back to you within one business day.</p>
-      </div>
-    </section>
+  <!-- SHARED JS -->
+  <script>
+    document.querySelectorAll('.nav-dropdown').forEach(function(el) {
+      var btn = el.querySelector('.nav-dropdown-btn');
+      btn.addEventListener('click', function(e) { e.stopPropagation(); var o = el.classList.toggle('is-open'); btn.setAttribute('aria-expanded', o); });
+    });
+    document.addEventListener('click', function() {
+      document.querySelectorAll('.nav-dropdown').forEach(function(el) { el.classList.remove('is-open'); var b = el.querySelector('.nav-dropdown-btn'); if (b) b.setAttribute('aria-expanded','false'); });
+    });
+  </script>
 
-    <!-- ─── Contact Form + Info ─── -->
-    <section class="contact-section" aria-labelledby="contact-form-heading">
-      <div class="contact-inner">
-        <div class="contact-grid">
-
-          <!-- LEFT: Form -->
-          <div class="contact-form-wrap">
-            <h2 class="contact-form-title" id="contact-form-heading">Send us a message</h2>
-            <!-- NOTE: Wire up form action to your form backend (e.g. Formspree, Netlify Forms, or custom endpoint). Currently static. -->
-            <form action="#" method="POST" novalidate aria-label="Contact form">
-              <div class="form-row">
-                <div class="form-group">
-                  <label class="form-label" for="contact-name">Name <span aria-hidden="true">*</span></label>
-                  <input
-                    class="form-input" type="text" id="contact-name" name="name"
-                    autocomplete="name" required
-                    aria-required="true"
-                    placeholder="Your full name"
-                  />
-                </div>
-                <div class="form-group">
-                  <label class="form-label" for="contact-email">Email <span aria-hidden="true">*</span></label>
-                  <input
-                    class="form-input" type="email" id="contact-email" name="email"
-                    autocomplete="email" required
-                    aria-required="true"
-                    placeholder="you@organization.com"
-                  />
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="contact-company">Company / Organization</label>
-                <input
-                  class="form-input" type="text" id="contact-company" name="company"
-                  autocomplete="organization"
-                  placeholder="Your organization name"
-                />
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="contact-purpose">Purpose <span aria-hidden="true">*</span></label>
-                <select class="form-select" id="contact-purpose" name="purpose" required aria-required="true">
-                  <option value="" disabled selected>Select a reason for reaching out…</option>
-                  <option value="general">General Inquiry</option>
-                  <option value="data-access">Data Access</option>
-                  <option value="partnership">Partnership</option>
-                  <option value="press">Press</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="contact-message">Message <span aria-hidden="true">*</span></label>
-                <textarea
-                  class="form-textarea" id="contact-message" name="message"
-                  required aria-required="true"
-                  placeholder="Tell us how we can help…"
-                ></textarea>
-              </div>
-              <button type="submit" class="btn-submit">Send Message</button>
-              <p class="form-note">We respond to all inquiries within one business day.</p>
-            </form>
-          </div>
-
-          <!-- RIGHT: Contact info -->
-          <aside class="contact-info" aria-label="Contact information">
-            <div class="info-card">
-              <div class="info-card-title">Email</div>
-              <div class="info-card-value">
-                <a href="mailto:contact@eyecosystems.com" class="info-link">contact@eyecosystems.com</a>
-              </div>
-              <div class="info-card-sub">For all inquiries — data, partnerships, press, and general questions.</div>
-            </div>
-            <div class="info-card">
-              <div class="info-card-title">Location</div>
-              <div class="info-card-value">Jacksonville, FL</div>
-              <div class="info-card-sub">Headquartered in Jacksonville. Our data operations are centered on the Jacksonville BVI community.</div>
-            </div>
-            <div class="info-card">
-              <div class="info-card-title">Response Time</div>
-              <div class="info-card-value">Within 1 Business Day</div>
-              <div class="info-card-sub">We review all messages personally. No bots, no auto-replies.</div>
-            </div>
-            <div class="info-card">
-              <div class="info-card-title">Quick Links</div>
-              <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 4px;">
-                <a href="/book-demo" class="info-link" style="font-size: 14px;">&#8594; Book a Demo</a>
-                <a href="/docs" class="info-link" style="font-size: 14px;">&#8594; View Documentation</a>
-                <a href="/our-data" class="info-link" style="font-size: 14px;">&#8594; Explore Our Data</a>
-              </div>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── Other ways to connect ─── -->
-    <section class="other-section" aria-labelledby="other-heading">
-      <div class="other-inner">
-        <h2 class="other-title" id="other-heading">Other ways to connect</h2>
-        <div class="other-grid" role="list">
-          <a href="/book-demo" class="other-card" role="listitem" aria-label="Book a demo with Eyecosystems">
-            <div class="other-card-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#01a39e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
-              </svg>
-            </div>
-            <div class="other-card-title">Book a Demo</div>
-            <div class="other-card-body">See the full Jacksonville Hub dataset, the API, and how it maps to your ADA compliance workflow. 30 minutes.</div>
-            <span class="other-card-arrow">Schedule &rarr;</span>
-          </a>
-          <a href="/docs" class="other-card" role="listitem" aria-label="View Eyecosystems API documentation">
-            <div class="other-card-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#01a39e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
-              </svg>
-            </div>
-            <div class="other-card-title">View Documentation</div>
-            <div class="other-card-body">Full API reference, data schema, authentication guide, and code examples for integrating Eyecosystems data.</div>
-            <span class="other-card-arrow">Read the Docs &rarr;</span>
-          </a>
-          <a href="https://www.linkedin.com/company/eyecosystems/" target="_blank" rel="noopener noreferrer" class="other-card" role="listitem" aria-label="Eyecosystems on LinkedIn (opens in new tab)">
-            <div class="other-card-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#01a39e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
-              </svg>
-            </div>
-            <div class="other-card-title">LinkedIn</div>
-            <div class="other-card-body">Follow Eyecosystems on LinkedIn for updates on ADA compliance, BVI community data, and company news.</div>
-            <span class="other-card-arrow">Follow us &rarr;</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── Footer ─── -->
-    <footer class="site-footer" role="contentinfo">
-      <div class="footer-inner">
-        <div class="footer-grid">
-          <div>
-            <a href="/" class="footer-brand-logo" aria-label="Eyecosystems home">
-              <img src="https://pub-629428d185ca4960a0a73c850d32294b.r2.dev/company_61718/images/44fcd4c3-2756-4f76-91cd-ed604729d4d9.png" alt="Eyecosystems logo" width="28" height="28" />
-              <span class="footer-brand-name">Eyecosystems</span>
-            </a>
-            <p class="footer-tagline">Human-verified accessibility data for ADA Title II compliance.</p>
-          </div>
-          <div>
-            <div class="footer-col-title">Product</div>
-            <ul class="footer-col-links">
-              <li><a href="/our-data">Our Data</a></li>
-              <li><a href="/docs">Docs</a></li>
-              <li><a href="/book-demo">Book Demo</a></li>
-            </ul>
-          </div>
-          <div>
-            <div class="footer-col-title">Company</div>
-            <ul class="footer-col-links">
-              <li><a href="/about">About</a></li>
-              <li><a href="/blog">Blog</a></li>
-              <li><a href="/investors">Investors</a></li>
-              <li><a href="/contact">Contact</a></li>
-            </ul>
-          </div>
-          <div>
-            <div class="footer-col-title">Legal</div>
-            <ul class="footer-col-links">
-              <li><a href="/privacy">Privacy Policy</a></li>
-              <li><a href="/terms">Terms of Service</a></li>
-              <li><a href="/accessibility">Accessibility</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <span class="footer-copy">&copy; 2026 Eyecosystems. All rights reserved. Jacksonville, FL.</span>
-          <nav class="footer-bottom-links" aria-label="Footer legal links">
-            <a href="/privacy">Privacy</a>
-            <a href="/terms">Terms</a>
-            <a href="/contact">Contact</a>
-          </nav>
-        </div>
-      </div>
-    </footer>
-
-    <script>
-      document.querySelectorAll('.nav-dropdown').forEach(function(el){
-        var btn=el.querySelector('.nav-dropdown-btn');
-        btn.addEventListener('click',function(e){e.stopPropagation();var o=el.classList.toggle('is-open');btn.setAttribute('aria-expanded',o);});
-      });
-      document.addEventListener('click',function(){
-        document.querySelectorAll('.nav-dropdown').forEach(function(el){el.classList.remove('is-open');var b=el.querySelector('.nav-dropdown-btn');if(b)b.setAttribute('aria-expanded','false');});
-      });
-    </script>
-
-  </body>
+</body>
 </html>
